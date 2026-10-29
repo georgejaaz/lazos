@@ -1,0 +1,1719 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lazos · Conócete en pareja</title>
+<meta name="description" content="Cuestionario gratuito de autoconocimiento en pareja basado en psicología: descubre tu estilo de apego, tus fortalezas, miedos, inseguridades y anhelos, y compártelo con tu pareja.">
+<meta name="theme-color" content="#b85a40">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="Lazos · Conócete en pareja">
+<meta property="og:description" content="Descubre cómo amas, qué temes y qué anhelas en una relación. Un cuestionario basado en psicología, para cualquier persona y cualquier relación.">
+<!-- Para una vista previa con imagen, sube una imagen 1200x630 y descomenta: -->
+<!-- <meta property="og:image" content="https://TU-SITIO.netlify.app/og.png"> -->
+<meta name="twitter:card" content="summary">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='16' fill='none' stroke='%23b85a40' stroke-width='5'/%3E%3Ccircle cx='40' cy='32' r='16' fill='none' stroke='%235f806a' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf6f1; --surface:#ffffff; --surface-2:#f3ece4; --text:#2b2420; --muted:#6c5f57;
+  --line:#e6dbd0; --accent:#b85a40; --accent-ink:#ffffff; --accent-soft:#f6e3db;
+  --sage:#5f806a; --sage-soft:#e2ece4; --amber:#a8661c; --amber-soft:#f8ead6;
+  --rose:#a8476a; --shadow:0 1px 2px rgba(60,40,30,.06),0 8px 24px rgba(60,40,30,.06);
+  --radius:18px; --font-h:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-b:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#191513; --surface:#231e1b; --surface-2:#2d2723; --text:#f2eae3; --muted:#b9aca2;
+    --line:#3b332e; --accent:#e58c6f; --accent-ink:#1d1310; --accent-soft:#3c2a23;
+    --sage:#93b89d; --sage-soft:#24332a; --amber:#e3a75b; --amber-soft:#3a2d1b; --rose:#e38aa9;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#191513; --surface:#231e1b; --surface-2:#2d2723; --text:#f2eae3; --muted:#b9aca2;
+  --line:#3b332e; --accent:#e58c6f; --accent-ink:#1d1310; --accent-soft:#3c2a23;
+  --sage:#93b89d; --sage-soft:#24332a; --amber:#e3a75b; --amber-soft:#3a2d1b; --rose:#e38aa9;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-b);font-size:17px;line-height:1.6;min-height:100vh}
+h1,h2,h3{font-family:var(--font-h);font-weight:600;line-height:1.2;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,6vw,2.8rem)}
+h2{font-size:clamp(1.4rem,4vw,1.75rem)}
+h3{font-size:1.15rem}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .in{max-width:760px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--font-h);font-size:1.3rem;font-weight:600;text-decoration:none;color:var(--text);background:none;border:0;cursor:pointer;padding:4px}
+.brand svg{width:26px;height:26px}
+.icon-btn{background:var(--surface);border:1px solid var(--line);border-radius:999px;width:40px;height:40px;display:grid;place-items:center;cursor:pointer}
+.icon-btn svg{width:20px;height:20px}
+
+main{max-width:760px;margin:0 auto;padding:24px 16px 80px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:18px}
+.card.soft{background:var(--surface-2);box-shadow:none}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:600;margin-bottom:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 22px;border:1px solid transparent;cursor:pointer;font-weight:600;text-decoration:none;transition:transform .1s,background .2s;min-height:46px}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-ghost{background:var(--surface);border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{background:var(--surface-2)}
+.btn-link{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;padding:8px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.stack>*+*{margin-top:12px}
+
+.hero{text-align:center;padding:28px 0 8px}
+.hero .lead{font-size:1.1rem;color:var(--muted);max-width:560px;margin:0 auto 20px}
+.hero-art{width:120px;height:120px;margin:0 auto 12px;display:block}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.feature{display:flex;gap:12px;align-items:flex-start;padding:14px;background:var(--surface-2);border-radius:14px}
+.feature .ic{font-size:1.4rem;line-height:1}
+.note{border-left:4px solid var(--amber);background:var(--amber-soft);padding:14px 16px;border-radius:10px;font-size:.95rem}
+.note.sage{border-color:var(--sage);background:var(--sage-soft)}
+
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font-weight:600;margin-bottom:10px}
+.field label.lbl{display:block;font-weight:600;margin-bottom:6px}
+.input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);min-height:46px}
+textarea{min-height:110px;resize:vertical}
+.choice{display:flex;gap:10px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;cursor:pointer;background:var(--bg)}
+.choice:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.choice input{accent-color:var(--accent);width:18px;height:18px;flex:none}
+
+/* Quiz */
+.progress{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin:6px 0 4px}
+.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--rose));border-radius:99px;transition:width .3s}
+.qmeta{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}
+.qtext{font-family:var(--font-h);font-size:clamp(1.3rem,4.2vw,1.65rem);line-height:1.35;margin:18px 0 22px;min-height:3.2em}
+.likert{display:grid;gap:8px}
+.likert button{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);cursor:pointer;transition:border-color .15s,background .15s;font-size:1rem}
+.likert button:hover{border-color:var(--accent)}
+.likert button .k{width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);font-size:.85rem;font-weight:700;color:var(--muted)}
+.likert button[aria-checked="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.likert button[aria-checked="true"] .k{background:var(--accent);color:var(--accent-ink)}
+.qnav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:18px}
+.qnav .btn{white-space:nowrap}
+@media (max-width:600px){.kbd-hint{display:none}}
+.hint{font-size:.9rem;color:var(--muted);background:var(--surface-2);padding:8px 12px;border-radius:10px;margin-top:10px}
+.block-ic{font-size:2.6rem;line-height:1;margin-bottom:8px}
+.fade{animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.progress>div{transition:none}}
+
+/* Results */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
+.chips a{flex:none;font-size:.85rem;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--text);white-space:nowrap}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.toolbar .btn{padding:10px 16px;min-height:42px;font-size:.95rem}
+.sec-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-title .ic{font-size:1.5rem}
+.sec-title h2{margin:0}
+.dim{padding:14px 0;border-top:1px solid var(--line)}
+.dim:first-of-type{border-top:0}
+.dim-h{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:6px}
+.dim-h strong{font-size:1.02rem}
+.tag{font-size:.75rem;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.tag.good{background:var(--sage-soft);color:var(--sage)}
+.tag.mid{background:var(--amber-soft);color:var(--amber)}
+.tag.bad{background:var(--accent-soft);color:var(--accent)}
+.bar{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin:4px 0 10px}
+.bar>div{height:100%;border-radius:99px}
+.bar.b2{margin-top:2px}
+.ex{margin:6px 0 0;padding-left:20px}
+.ex li{margin-bottom:4px}
+details.more summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.92rem;margin-top:4px}
+.list-plain{list-style:none;padding:0;margin:0}
+.list-plain li{padding:10px 0;border-top:1px solid var(--line);display:flex;gap:10px}
+.list-plain li:first-child{border-top:0}
+.quote{font-family:var(--font-h);font-size:1.08rem;font-style:italic;border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin:10px 0}
+.att{display:grid;grid-template-columns:1fr;gap:16px;align-items:center}
+@media (min-width:640px){.att{grid-template-columns:220px 1fr}}
+.att svg{width:100%;max-width:240px;margin:0 auto;display:block}
+.radar-wrap svg{width:100%;max-width:520px;display:block;margin:0 auto}
+.legend{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:.9rem;margin-top:6px}
+.legend span::before{content:'';display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--c);margin-right:6px;vertical-align:-1px}
+.big-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--accent-soft);font-weight:700;font-size:1.05rem}
+.two-col{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:640px){.two-col{grid-template-columns:1fr 1fr}}
+.shared-banner{background:linear-gradient(135deg,var(--accent-soft),var(--sage-soft));border-radius:var(--radius);padding:20px;margin-bottom:18px}
+.cmp-item{padding:14px;border-radius:14px;background:var(--surface-2);margin-bottom:10px}
+.cmp-item>strong{display:block;margin-bottom:4px}
+.pill-a,.pill-b{display:inline-block;padding:1px 10px;border-radius:999px;font-weight:700;font-size:.85rem}
+.pill-a{background:var(--accent-soft);color:var(--accent)}
+.pill-b{background:var(--sage-soft);color:var(--sage)}
+ol.q{padding-left:22px}
+ol.q li{margin-bottom:8px}
+
+/* Modal */
+dialog{border:0;border-radius:var(--radius);padding:0;max-width:560px;width:calc(100% - 32px);background:var(--surface);color:var(--text);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(20,12,8,.55)}
+.modal-in{padding:22px;max-height:85vh;overflow:auto}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.linkbox{display:flex;gap:8px;margin:10px 0}
+.linkbox input{flex:1;min-width:0;font-size:.85rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 18px;border-radius:999px;opacity:0;transition:all .25s;z-index:100;pointer-events:none;font-size:.95rem}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{max-width:760px;margin:0 auto;padding:0 16px 40px;color:var(--muted);font-size:.85rem;text-align:center}
+
+@media print{
+  .topbar,.toolbar,.chips,.no-print,footer,dialog,.toast{display:none!important}
+  body{background:#fff;color:#000;font-size:12pt}
+  main{max-width:none;padding:0}
+  .card{box-shadow:none;border:1px solid #ccc;break-inside:avoid-page;page-break-inside:avoid}
+  .print-hide{display:none!important}
+  details{display:block}
+  details>summary{display:none}
+  details:not([open])>*:not(summary){display:block}
+  a{color:#000;text-decoration:none}
+}
+
+</style>
+</head>
+<body>
+<header class="topbar"><div class="in">
+  <button class="brand" id="homeBtn" aria-label="Lazos, ir al inicio">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="32" r="16" fill="none" stroke="var(--accent)" stroke-width="5"/><circle cx="40" cy="32" r="16" fill="none" stroke="var(--sage)" stroke-width="5"/></svg>
+    Lazos
+  </button>
+  <button class="icon-btn" id="themeBtn" aria-label="Cambiar entre modo claro y oscuro">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+  </button>
+</div></header>
+<main id="app"></main>
+<footer>Lazos · Herramienta de autoexploración basada en psicología. No es un diagnóstico ni sustituye la atención profesional. Tus datos no salen de tu navegador.</footer>
+<div class="toast" id="toast" role="status"></div>
+<noscript><p style="padding:20px">Este cuestionario necesita JavaScript activado.</p></noscript>
+<script>
+/* =====================================================================
+   DATOS DEL CUESTIONARIO — edita aquí preguntas, dimensiones y textos.
+   ---------------------------------------------------------------------
+   BLOCKS: bloques de preguntas. Cada ítem es [dimensión, texto, invertido?]
+     - invertido = 1 significa que la puntuación se calcula como 6 - respuesta.
+   DIMS: cada dimensión con su nombre, polaridad y textos de interpretación.
+     - pol: 'risk'  → un puntaje alto es un área de atención.
+            'good'  → un puntaje alto es una fortaleza.
+            'info'  → descriptivo (anhelos, lenguajes de afecto).
+     - low / mid / high: interpretación según nivel (bajo <35, medio 35–64, alto ≥65).
+     - ex: ejercicios prácticos sugeridos cuando la dimensión es un área de atención.
+     - need: frase en primera persona para "Lo que mi pareja debería saber de mí".
+     - help: acción concreta para "Cómo puedes acompañarme".
+     - plus: cómo se ve como fortaleza (se usa en "Puntos fuertes").
+   ===================================================================== */
+
+const SCALES = {
+  agree: ['Nada que ver conmigo', 'Poco que ver conmigo', 'En parte / a veces', 'Bastante yo', 'Totalmente yo'],
+  importance: ['Nada importante', 'Poco importante', 'Moderadamente importante', 'Muy importante', 'Esencial para mí']
+};
+
+const BLOCKS = [
+  {
+    id: 'vinculo', title: 'Cómo me vinculo', icon: '🔗', scale: 'agree',
+    intro: 'Estas preguntas exploran tu forma de buscar cercanía y de protegerte en una relación. Se basan en la teoría del apego adulto, que estudia cómo aprendimos a vincularnos desde la infancia.',
+    items: [
+      ['ansiedad', 'Me preocupa con frecuencia que mi pareja deje de quererme.'],
+      ['ansiedad', 'Cuando mi pareja tarda en responder un mensaje, me inquieto y pienso en lo peor.'],
+      ['ansiedad', 'Necesito que me confirmen seguido que me quieren para sentir calma.'],
+      ['ansiedad', 'Me da miedo que, si me conocen de verdad, se alejen de mí.'],
+      ['ansiedad', 'Suelo sentir que doy más amor del que recibo.'],
+      ['ansiedad', 'Confío en que el cariño de mi pareja se mantiene aunque pasemos un tiempo sin hablar.', 1],
+      ['evitacion', 'Me incomoda cuando alguien busca demasiada cercanía emocional conmigo.'],
+      ['evitacion', 'Prefiero resolver mis problemas sin apoyarme en mi pareja.'],
+      ['evitacion', 'Me cuesta hablar de lo que siento, incluso con mi pareja.'],
+      ['evitacion', 'Cuando una relación se vuelve muy seria, siento ganas de tomar distancia.'],
+      ['evitacion', 'Me resulta natural pedir ayuda o consuelo a mi pareja.', 1],
+      ['evitacion', 'Disfruto la cercanía emocional sin sentir que pierdo algo de mí.', 1]
+    ]
+  },
+  {
+    id: 'miedos', title: 'Lo que temo', icon: '🌧️', scale: 'agree',
+    intro: 'Todos llevamos miedos a una relación. Nombrarlos les quita fuerza. Responde pensando en lo que sientes, no en lo que “deberías” sentir.',
+    items: [
+      ['abandono', 'Me aterra la idea de que la persona que amo me deje.'],
+      ['abandono', 'Cuando siento que mi pareja se distancia, hago lo que sea para recuperar su atención.'],
+      ['abandono', 'He seguido en relaciones que no me hacían bien por miedo a quedarme sin nadie.'],
+      ['rechazo', 'Temo no ser suficiente para la persona con quien estoy.'],
+      ['rechazo', 'Evito mostrar lo que necesito por miedo a que me rechacen.'],
+      ['rechazo', 'Puedo escuchar un “no” de mi pareja sin sentir que me rechaza como persona.', 1],
+      ['absorcion', 'Me da miedo dejar de ser yo cuando estoy en una relación.'],
+      ['absorcion', 'Siento que una relación puede quitarme libertad.'],
+      ['absorcion', 'Me agobia sentir que alguien depende mucho de mí.'],
+      ['traicion', 'Me cuesta creer que alguien me será leal.'],
+      ['traicion', 'Suelo buscar señales de que me están mintiendo o escondiendo algo.'],
+      ['traicion', 'Doy mi confianza con facilidad, salvo que haya razones claras para no hacerlo.', 1]
+    ]
+  },
+  {
+    id: 'yo', title: 'Cómo me veo', icon: '🪞', scale: 'agree',
+    intro: 'Aquí exploramos tu valía personal y las inseguridades que pueden aparecer en pareja, como los celos o la necesidad de aprobación.',
+    hintNonMono: 'Si tu relación no es monógama, piensa en los acuerdos que tienen y en cómo te sientes dentro de ellos.',
+    items: [
+      ['valia', 'Siento que merezco amor tal como soy.'],
+      ['valia', 'Me gusta la persona que soy dentro de una relación.'],
+      ['valia', 'Siento que tengo que esforzarme todo el tiempo para que me quieran.', 1],
+      ['valia', 'Pienso que mi pareja estaría mejor con alguien más que conmigo.', 1],
+      ['comparacion', 'Me comparo con las exparejas o con otras personas cercanas a mi pareja.'],
+      ['comparacion', 'Siento celos aunque no haya motivos reales.'],
+      ['comparacion', 'Me incomoda cuando mi pareja admira o elogia a otra persona.'],
+      ['validacion', 'Mi estado de ánimo depende mucho de cómo me trate mi pareja.'],
+      ['validacion', 'Necesito que mi pareja apruebe mis decisiones para sentir seguridad en ellas.'],
+      ['validacion', 'Puedo sentirme bien conmigo aunque mi pareja no me lo diga.', 1]
+    ]
+  },
+  {
+    id: 'patrones', title: 'Patrones que traigo', icon: '🧵', scale: 'agree',
+    intro: 'Muchas de nuestras reacciones en pareja vienen de experiencias tempranas. Estas preguntas se inspiran en la terapia de esquemas y buscan patrones, no culpables. Tómate tu tiempo.',
+    items: [
+      ['privacion', 'Siento que nadie llega a entender del todo lo que necesito.'],
+      ['privacion', 'Aunque me quieran, a veces siento un vacío que nadie llena.'],
+      ['privacion', 'Crecí sintiendo que mis emociones no eran importantes para los demás.'],
+      ['autosacrificio', 'Pongo las necesidades de mi pareja por encima de las mías casi siempre.'],
+      ['autosacrificio', 'Me siento culpable cuando hago algo solo para mí.'],
+      ['autosacrificio', 'Suelo cuidar a los demás más de lo que dejo que me cuiden.'],
+      ['subyugacion', 'Digo que sí aunque quiera decir que no, para evitar problemas.'],
+      ['subyugacion', 'Me guardo mi opinión para que mi pareja no se enoje.'],
+      ['subyugacion', 'Me adapto tanto a mi pareja que olvido lo que yo quiero.'],
+      ['exigencia', 'Me exijo mucho y casi nunca siento que hago las cosas lo bastante bien.'],
+      ['exigencia', 'Me cuesta aceptar los errores de mi pareja, aunque sean pequeños.'],
+      ['exigencia', 'Tengo una idea muy clara de cómo debería ser la relación y me frustra cuando no es así.'],
+      ['verguenza', 'Hay partes de mí que me da vergüenza que mi pareja conozca.'],
+      ['verguenza', 'Siento que, en el fondo, algo en mí no está bien.'],
+      ['verguenza', 'Cuando me critican, siento que confirman lo peor que pienso de mí.']
+    ]
+  },
+  {
+    id: 'conflicto', title: 'Cuando hay conflicto', icon: '⚡', scale: 'agree',
+    intro: 'Todas las parejas discuten; lo importante es cómo. Estas preguntas se basan en las investigaciones de John Gottman sobre qué separa a las parejas que se desgastan de las que se fortalecen.',
+    items: [
+      ['critica', 'Cuando algo me molesta, suelo decirlo con frases como “tú siempre” o “tú nunca”.'],
+      ['critica', 'En una discusión, termino hablando de cómo es mi pareja en lugar de lo que pasó.'],
+      ['critica', 'Puedo expresar una queja sin atacar a la otra persona.', 1],
+      ['defensa', 'Cuando mi pareja se queja de algo, mi primera reacción es justificarme.'],
+      ['defensa', 'Me cuesta reconocer mi parte de responsabilidad en un problema.'],
+      ['defensa', 'Suelo responder a una queja con otra queja.'],
+      ['desprecio', 'En una pelea uso el sarcasmo o la burla.'],
+      ['desprecio', 'A veces pongo los ojos en blanco o hago gestos de fastidio cuando mi pareja habla.'],
+      ['desprecio', 'Hay momentos en que siento que estoy por encima de mi pareja.'],
+      ['evasion', 'Cuando una discusión sube de tono, me cierro y dejo de responder.'],
+      ['evasion', 'Prefiero quedarme en silencio o irme antes que enfrentar un conflicto.'],
+      ['evasion', 'Evito tocar temas difíciles con tal de que no haya pelea.'],
+      ['reparacion', 'Después de una pelea, busco la forma de reconectar.'],
+      ['reparacion', 'Puedo pedir perdón de verdad cuando me equivoco.'],
+      ['reparacion', 'Acepto los intentos de mi pareja por hacer las paces, aunque siga con algo de molestia.'],
+      ['regulacion', 'Cuando me enojo, puedo calmarme antes de decir algo de lo que me arrepienta.'],
+      ['regulacion', 'Me doy cuenta de cuándo necesito una pausa en una discusión y la pido.'],
+      ['regulacion', 'Mis emociones me desbordan con facilidad en un conflicto.', 1]
+    ]
+  },
+  {
+    id: 'aporto', title: 'Lo que aporto', icon: '🌱', scale: 'agree',
+    intro: 'Ahora miramos tus recursos: las habilidades y actitudes que ya traes y que sostienen una relación. Responde con honestidad, sin modestia ni exageración.',
+    items: [
+      ['apertura', 'Puedo mostrarle mis miedos a mi pareja sin sentirme débil.'],
+      ['apertura', 'Comparto lo que siento aunque me dé un poco de miedo.'],
+      ['apertura', 'Me gusta que mi pareja conozca mi mundo interior.'],
+      ['asertividad', 'Expreso lo que necesito de forma clara y respetuosa.'],
+      ['asertividad', 'Puedo decir “esto no me gustó” sin herir y sin callarme.'],
+      ['asertividad', 'Hablo en primera persona (“yo siento”, “yo necesito”) cuando algo me afecta.'],
+      ['empatia', 'Puedo ponerme en el lugar de mi pareja aunque no esté de acuerdo.'],
+      ['empatia', 'Noto cuando mi pareja está mal, aunque no me lo diga.'],
+      ['empatia', 'Escucho para entender, no solo para responder.'],
+      ['compromiso', 'Cuando decido estar con alguien, me comprometo de verdad.'],
+      ['compromiso', 'Puedo atravesar momentos difíciles con mi pareja sin rendirme a la primera.'],
+      ['compromiso', 'Pienso en un futuro compartido y trabajo por él.'],
+      ['pasion', 'Me importa mantener viva la atracción y el deseo en la relación.'],
+      ['pasion', 'Busco momentos de romance, juego o sorpresa con mi pareja.'],
+      ['pasion', 'Me siento con libertad de expresar mi deseo y mi afecto físico.'],
+      ['aprecio', 'Expreso con frecuencia lo que admiro de mi pareja.'],
+      ['aprecio', 'Me fijo más en lo que mi pareja hace bien que en lo que hace mal.'],
+      ['aprecio', 'Agradezco los pequeños gestos de cariño, aunque sean cotidianos.'],
+      ['limites', 'Sé poner límites cuando algo no me hace bien.'],
+      ['limites', 'Respeto los límites de mi pareja aunque no me gusten.'],
+      ['limites', 'Puedo decir que no sin sentir culpa excesiva.'],
+      ['autonomia', 'Tengo intereses, amistades y espacios propios fuera de la relación.'],
+      ['autonomia', 'Me siento bien cuando paso tiempo a solas.'],
+      ['autonomia', 'Apoyo que mi pareja tenga su propio espacio y sus propios proyectos.'],
+      ['curiosidad', 'Me interesa conocer a fondo los sueños y preocupaciones de mi pareja.'],
+      ['curiosidad', 'Hago preguntas para conocer mejor a mi pareja, incluso después de mucho tiempo.'],
+      ['curiosidad', 'Recuerdo los detalles importantes de la vida de mi pareja.']
+    ]
+  },
+  {
+    id: 'anhelos', title: 'Lo que anhelo', icon: '✨', scale: 'importance',
+    intro: 'Aquí no hay respuestas mejores ni peores. Indica qué tan importante es cada aspecto para ti en una relación.',
+    items: [
+      ['an_estabilidad', 'Sentir estabilidad: saber que la relación es un lugar seguro.'],
+      ['an_profundidad', 'Una conexión emocional profunda, donde pueda ser yo sin máscaras.'],
+      ['an_crecimiento', 'Crecer como personas y apoyarnos en nuestras metas individuales.'],
+      ['an_aventura', 'Aventura, novedad y experiencias nuevas compartidas.'],
+      ['an_proyecto', 'Construir un proyecto de vida en común (hogar, familia, planes a largo plazo).'],
+      ['an_libertad', 'Que cada quien conserve su libertad y su espacio.'],
+      ['an_equipo', 'Ser un equipo: compañerismo, complicidad y amistad.'],
+      ['an_pasion', 'Pasión, deseo y romance que se mantengan con el tiempo.']
+    ]
+  },
+  {
+    id: 'amor', title: 'Cómo doy y recibo amor', icon: '💞', scale: 'agree',
+    intro: 'Cada persona siente y expresa el cariño de formas distintas. Usamos como referencia los “lenguajes del amor” de Gary Chapman: son útiles para conversar, aunque tienen poca evidencia científica, así que tómalos como guía y no como verdad absoluta.',
+    items: [
+      ['lr_palabras', 'Lo que más me llena es que me digan con palabras cuánto me quieren.'],
+      ['lr_palabras', 'Un mensaje cariñoso o un elogio sincero me cambia el día.'],
+      ['lr_tiempo', 'Para mí, el amor se nota en el tiempo de calidad que pasamos sin distracciones.'],
+      ['lr_tiempo', 'Me duele más que no tengan tiempo para mí que casi cualquier otra cosa.'],
+      ['lr_actos', 'Siento el amor cuando mi pareja me ayuda o me facilita la vida.'],
+      ['lr_actos', 'Que alguien haga algo por mí sin que se lo pida vale más que mil palabras.'],
+      ['lr_contacto', 'Los abrazos, las caricias y el contacto físico me hacen sentir cerca.'],
+      ['lr_contacto', 'Si pasa tiempo sin contacto físico, siento distancia emocional.'],
+      ['lr_detalles', 'Un detalle pensado especialmente para mí me hace sentir importante.'],
+      ['lr_detalles', 'Me emociona que recuerden algo que me gusta y me sorprendan con ello.'],
+      ['lg_palabras', 'Suelo demostrar mi amor diciéndolo o escribiéndolo.'],
+      ['lg_tiempo', 'Demuestro mi amor dedicando tiempo de calidad, sin distracciones.'],
+      ['lg_actos', 'Demuestro mi amor haciendo cosas prácticas por mi pareja.'],
+      ['lg_contacto', 'Demuestro mi amor con abrazos, caricias y cercanía física.'],
+      ['lg_detalles', 'Demuestro mi amor con detalles y regalos pensados.']
+    ]
+  },
+  {
+    id: 'entorno', title: 'Lo que nos rodea', icon: '🏘️', scale: 'agree', optional: true,
+    intro: 'Módulo opcional. A veces la falta de aceptación de la familia o del entorno pesa sobre una relación (por ejemplo, en parejas del mismo género, de distintas culturas o religiones, o con diferencias de edad). Responde solo si te resulta útil.',
+    items: [
+      ['presion', 'Siento que mi relación no es aceptada por mi familia o por personas importantes para mí.'],
+      ['presion', 'Tengo que ocultar o cuidar cómo muestro mi relación en público.'],
+      ['presion', 'Las opiniones o la presión de otras personas generan tensión en la relación.'],
+      ['presion', 'Siento que tenemos personas cercanas que apoyan nuestra relación.', 1]
+    ]
+  }
+];
+
+const OPEN_QUESTIONS = [
+  { id: 'o1', t: '¿Qué te gustaría que tu pareja supiera de ti y no te has atrevido a decir?' },
+  { id: 'o2', t: '¿Cómo te gusta que te quieran? Describe un momento en que te sentiste amado o amada de verdad.' },
+  { id: 'o3', t: '¿Qué patrón de tus relaciones pasadas no quieres repetir?' },
+  { id: 'o4', t: '¿Qué te comprometes a trabajar en ti para cuidar tu relación?' }
+];
+
+const DIMS = {
+  /* ---------------- APEGO ---------------- */
+  ansiedad: {
+    name: 'Ansiedad en el vínculo', pol: 'risk', sec: 'vinculo',
+    low: 'Sueles sentir calma respecto al cariño de tu pareja; no necesitas confirmaciones constantes para sentirte en seguridad.',
+    mid: 'A veces aparece la duda sobre si te quieren lo suficiente, sobre todo en momentos de distancia o estrés.',
+    high: 'Tu sistema de alerta afectiva se activa con facilidad: los silencios o la distancia pueden sentirse como amenazas y te llevan a buscar confirmación.',
+    ex: ['Cuando sientas la urgencia de escribir o preguntar, espera diez minutos y nombra la emoción: “siento miedo de…”.', 'Escribe tres pruebas concretas del cariño de tu pareja y reléelas en momentos de duda.', 'Pide lo que necesitas de forma directa (“¿me abrazas?”) en lugar de buscar señales indirectas.'],
+    need: 'Cuando hay distancia o silencio, me ayuda mucho saber que seguimos bien. No es desconfianza: es algo que estoy aprendiendo a calmar.',
+    help: 'Avísame si vas a estar sin contacto un rato y dime con palabras que estamos bien.',
+    plus: 'Vives el amor desde la calma, sin necesitar confirmaciones constantes.'
+  },
+  evitacion: {
+    name: 'Distancia emocional', pol: 'risk', sec: 'vinculo',
+    low: 'La cercanía te resulta natural: puedes apoyarte en tu pareja y dejar que se apoye en ti.',
+    mid: 'Valoras la cercanía, pero en algunos momentos necesitas espacio y te cuesta abrirte del todo.',
+    high: 'Cuando la intimidad crece, tiendes a protegerte tomando distancia. Es posible que aprendieras pronto que depender de otros no era seguro.',
+    ex: ['Practica compartir una emoción pequeña al día, aunque sea “hoy tuve un día pesado y me sentí así…”.', 'Cuando necesites espacio, dilo y ponle tiempo: “necesito una hora para mí y luego hablamos”.', 'Observa qué sientes en el cuerpo cuando alguien se acerca emocionalmente; nombrarlo reduce la urgencia de alejarte.'],
+    need: 'A veces necesito espacio para procesar lo que siento. No significa que me importes menos.',
+    help: 'Dame tiempo sin presionarme y pregúntame después con calma; me abro más cuando no hay presión.',
+    plus: 'Te permites la cercanía emocional y el apoyo mutuo.'
+  },
+  /* ---------------- MIEDOS ---------------- */
+  abandono: {
+    name: 'Miedo al abandono', pol: 'risk', sec: 'miedos',
+    low: 'La posibilidad de una separación no domina tus pensamientos; confías en que podrías salir adelante ante una pérdida.',
+    mid: 'El miedo a que te dejen aparece en ciertos momentos, sobre todo cuando notas cambios en tu pareja.',
+    high: 'El miedo a perder a quien amas es intenso y puede llevarte a ceder demasiado o a quedarte donde no estás bien.',
+    ex: ['Escribe qué harías y con quién contarías si una relación terminara: recordar tus recursos baja el miedo.', 'Distingue hechos de interpretaciones: “no contestó” es un hecho; “ya no me quiere” es una interpretación.', 'Cultiva relaciones de apoyo fuera de la pareja: amistades, familia, comunidad.'],
+    need: 'Me tranquiliza sentir constancia: pequeñas señales de que seguimos eligiéndonos.',
+    help: 'Cuando estemos en desacuerdo, recuérdame que discutir no significa que te vayas a ir.',
+    plus: 'Puedes amar sin aferrarte por miedo.'
+  },
+  rechazo: {
+    name: 'Miedo a no ser suficiente', pol: 'risk', sec: 'miedos',
+    low: 'Te sientes con derecho a pedir y a mostrarte; un “no” no te define.',
+    mid: 'A veces dudas en mostrar lo que necesitas por miedo a que no sea bien recibido.',
+    high: 'Temes que, si muestras lo que necesitas o quién eres, te rechacen. Eso puede llevarte a callar o a esforzarte de más.',
+    ex: ['Expresa una necesidad pequeña esta semana y observa qué pasa en realidad.', 'Separa el “no” a una petición del “no” a tu persona.', 'Anota cada día algo que aportas a la relación.'],
+    need: 'Me cuesta pedir lo que necesito porque temo no ser suficiente. Cuando lo hago, me ayuda que me escuches sin minimizarlo.',
+    help: 'Si te pido algo y no puedes, dímelo con cariño; así aprendo que un “no” no es un rechazo.',
+    plus: 'Te sientes con derecho a pedir y a mostrarte tal como eres.'
+  },
+  absorcion: {
+    name: 'Miedo a perder tu libertad', pol: 'risk', sec: 'miedos',
+    low: 'Puedes comprometerte sin sentir que pierdes tu identidad o tu libertad.',
+    mid: 'En ocasiones te inquieta que la relación ocupe demasiado espacio en tu vida.',
+    high: 'Te inquieta que una relación te absorba o te quite libertad. Esto puede llevarte a poner distancia justo cuando la relación avanza.',
+    ex: ['Define qué espacios propios son innegociables para ti y compártelos.', 'Pregúntate qué te da la relación, no solo qué te pide.', 'Acuerden rituales de tiempo propio y de tiempo juntos.'],
+    need: 'Necesito mantener espacios propios para sentirme bien en la relación; cuidarlos me ayuda a estar más presente contigo.',
+    help: 'Respeta mis tiempos a solas y no los tomes como rechazo.',
+    plus: 'Puedes comprometerte sin sentir que pierdes tu libertad.'
+  },
+  traicion: {
+    name: 'Miedo a la traición', pol: 'risk', sec: 'miedos',
+    low: 'Das tu confianza de forma sana y no vives en estado de sospecha.',
+    mid: 'Confías, aunque a veces aparecen dudas o necesitas comprobar que todo está bien.',
+    high: 'Te cuesta confiar plenamente; una parte de ti está atenta a señales de engaño, probablemente porque en algún momento confiar te dolió.',
+    ex: ['Cuando surja la sospecha, pregúntate: ¿qué evidencia tengo hoy, en esta relación?', 'Habla de tus miedos sin acusar: “me inquieta tal cosa, ¿me ayudas a entender?”.', 'Construyan confianza con acuerdos claros y revisables.'],
+    need: 'La confianza la construyo poco a poco; la transparencia y la coherencia me dan mucha paz.',
+    help: 'Cumple lo que acordamos y, si algo cambia, avísame. La coherencia me da tranquilidad.',
+    plus: 'Das tu confianza de forma sana.'
+  },
+  /* ---------------- INSEGURIDADES ---------------- */
+  valia: {
+    name: 'Valía personal', pol: 'good', sec: 'yo',
+    low: 'Es posible que dudes de merecer amor tal como eres y sientas que tienes que ganártelo constantemente.',
+    mid: 'Te valoras, aunque en momentos difíciles aparece la duda sobre si eres suficiente.',
+    high: 'Sientes que mereces amor y respeto tal como eres. Es una base muy sólida para cualquier relación.',
+    ex: ['Escribe tres cualidades tuyas que no dependan de lo que haces por otros.', 'Observa tu diálogo interno: ¿le hablarías así a alguien que quieres?', 'Recibe un elogio sin justificarlo ni devolverlo; solo di “gracias”.'],
+    need: 'A veces dudo de mi valor; me ayuda escuchar lo que aprecias de mí como persona, no solo lo que hago.',
+    help: 'Dime de vez en cuando qué valoras de mí como persona.',
+    plus: 'Sientes que mereces amor tal como eres.'
+  },
+  comparacion: {
+    name: 'Celos y comparación', pol: 'risk', sec: 'yo',
+    low: 'No vives la relación desde la comparación; los celos no suelen dominarte.',
+    mid: 'A veces aparecen celos o comparaciones que te generan incomodidad.',
+    high: 'Compararte o sentir celos te genera malestar frecuente, aun sin motivos claros. Suele ser una señal de inseguridad interna más que de lo que pasa afuera.',
+    ex: ['Cuando aparezcan los celos, pregúntate qué miedo hay debajo: ¿no ser suficiente?, ¿perder?', 'Reduce el tiempo revisando redes sociales; alimentan la comparación.', 'Hablen de los acuerdos de la relación en lugar de actuar sobre suposiciones.'],
+    need: 'Cuando siento celos no busco controlarte; es una inseguridad mía que estoy trabajando y me ayuda que hablemos con calma.',
+    help: 'Si notas mis celos, no me juzgues: recuérdame nuestros acuerdos con cariño.',
+    plus: 'No vives la relación desde la comparación ni los celos.'
+  },
+  validacion: {
+    name: 'Necesidad de aprobación', pol: 'risk', sec: 'yo',
+    low: 'Tu bienestar no depende solo de la aprobación de tu pareja; confías en tu propio criterio.',
+    mid: 'La opinión de tu pareja pesa bastante en cómo te sientes, aunque mantienes tu criterio.',
+    high: 'Tu bienestar depende mucho de cómo te trata tu pareja; su aprobación pesa más que tu propio criterio.',
+    ex: ['Antes de pedir opinión, decide qué piensas y escríbelo.', 'Haz cada semana algo que disfrutes sin compartirlo ni buscar reacción.', 'Escucha primero tu propia voz antes que la de los demás.'],
+    need: 'Tu opinión me importa mucho; estoy aprendiendo a confiar más en la mía.',
+    help: 'Anímame a decidir por mi cuenta y celebra cuando lo haga.',
+    plus: 'Confías en tu propio criterio sin depender de la aprobación ajena.'
+  },
+  presion: {
+    name: 'Presión del entorno', pol: 'risk', sec: 'yo',
+    low: 'Tu entorno no parece ser una fuente importante de tensión para tu relación.',
+    mid: 'Hay cierta presión o falta de apoyo del entorno que a veces se siente.',
+    high: 'La falta de aceptación o la presión del entorno pesa sobre tu relación. No es un problema tuyo ni de tu pareja, pero sí algo que pueden enfrentar en equipo.',
+    ex: ['Identifiquen juntos qué personas sí son una red de apoyo y cuiden esos vínculos.', 'Acuerden cómo responder a comentarios o presiones, para no enfrentarlas en solitario.', 'Busquen comunidades o grupos donde su relación sea bienvenida.'],
+    need: 'La presión del entorno a veces me afecta; me ayuda sentir que somos un equipo frente a eso.',
+    help: 'Hablemos de cómo nos afecta el entorno y decidamos juntos cómo cuidarnos.',
+    plus: 'Cuentas con un entorno que apoya tu relación.'
+  },
+  /* ---------------- HERIDAS / PATRONES ---------------- */
+  privacion: {
+    name: 'Privación emocional', pol: 'risk', sec: 'patrones',
+    low: 'En general sientes que tus necesidades emocionales pueden ser vistas y atendidas.',
+    mid: 'En ocasiones sientes un vacío afectivo o que no te entienden del todo.',
+    high: 'Puede que sientas que nadie termina de entender o cubrir tus necesidades afectivas. Muchas veces nace de haber crecido sin suficiente atención emocional, y lleva a pedir poco o a esperar poco.',
+    ex: ['Haz una lista de lo que necesitas emocionalmente (escucha, contacto, palabras) y compártela.', 'Nota cuándo sí recibes cuidado: este patrón tiende a hacernos ver solo la falta.', 'Pide de forma explícita: nadie adivina lo que necesitamos.'],
+    need: 'A veces siento que mis necesidades no se ven; me ayuda mucho cuando me preguntas cómo estoy de verdad.',
+    help: 'Pregúntame “¿qué necesitas hoy?” y escúchame sin prisa.',
+    plus: 'Sientes que tus necesidades emocionales pueden ser atendidas.'
+  },
+  autosacrificio: {
+    name: 'Autosacrificio', pol: 'risk', sec: 'patrones',
+    low: 'Equilibras bien el cuidar a otros con cuidarte a ti.',
+    mid: 'A veces priorizas a tu pareja por encima de ti más de lo que te conviene.',
+    high: 'Tiendes a poner las necesidades de los demás antes que las tuyas y a sentir culpa al cuidarte. A la larga, puede generar cansancio o resentimiento.',
+    ex: ['Agenda un tiempo semanal solo para ti y defiéndelo.', 'Antes de decir que sí, pregúntate: ¿lo hago por amor o por culpa?', 'Deja que te cuiden: acepta ayuda sin compensar de inmediato.'],
+    need: 'Suelo dar mucho y pedir poco; me ayuda que me animes a cuidarme y que también me cuides.',
+    help: 'Si me ves dar de más, pregúntame qué necesito yo.',
+    plus: 'Equilibras el cuidar a otros con cuidarte a ti.'
+  },
+  subyugacion: {
+    name: 'Complacer para evitar conflictos', pol: 'risk', sec: 'patrones',
+    low: 'Puedes expresar tu opinión y tus deseos aunque no coincidan con los de tu pareja.',
+    mid: 'En algunas situaciones prefieres ceder o callar para mantener la paz.',
+    high: 'Sueles callar lo que quieres o decir que sí para evitar enojos. Con el tiempo, la relación puede perder tu voz.',
+    ex: ['Empieza con desacuerdos pequeños y de bajo riesgo.', 'Usa la fórmula: “Entiendo lo que quieres; yo prefiero…”.', 'Observa qué pasa realmente cuando das tu opinión.'],
+    need: 'Me cuesta decir que no o dar mi opinión; me ayuda sentir que no habrá enojo si lo hago.',
+    help: 'Pregúntame qué prefiero y espera mi respuesta; valora cuando no estoy de acuerdo.',
+    plus: 'Mantienes tu voz y tus deseos dentro de la relación.'
+  },
+  exigencia: {
+    name: 'Exigencia y perfeccionismo', pol: 'risk', sec: 'patrones',
+    low: 'Tienes expectativas razonables de ti y de tu pareja; aceptas la imperfección.',
+    mid: 'A veces te exiges mucho o te frustras cuando la relación no es como esperabas.',
+    high: 'Tienes estándares muy altos para ti y para la relación. Eso te impulsa, pero puede volverse crítica constante y frustración.',
+    ex: ['Cada noche anota algo que estuvo “suficientemente bien”.', 'Antes de señalar un error de tu pareja, menciona dos cosas que sí funcionan.', 'Revisa qué expectativas sobre la relación son tuyas y cuáles heredaste.'],
+    need: 'Soy exigente, también conmigo; me ayuda que me recuerdes que no todo tiene que ser perfecto.',
+    help: 'Cuando me veas en modo crítico, invítame con humor a soltar un poco.',
+    plus: 'Aceptas la imperfección, tuya y de tu pareja.'
+  },
+  verguenza: {
+    name: 'Vergüenza y sensación de defecto', pol: 'risk', sec: 'patrones',
+    low: 'Te sientes con libertad de mostrarte sin temer que descubran algo “malo” en ti.',
+    mid: 'Hay partes de ti que prefieres no mostrar y algunas críticas te duelen más de la cuenta.',
+    high: 'Puede que sientas que algo en ti no está bien y temas que tu pareja lo descubra. Esta herida suele hacer que las críticas duelan mucho más.',
+    ex: ['Comparte algo pequeño de ti que sueles esconder y observa la reacción.', 'Separa conducta de identidad: “me equivoqué” no es lo mismo que “soy un error”.', 'Trabajar esta herida con un profesional suele traer mucho alivio.'],
+    need: 'Las críticas me pueden doler más de lo que parece; me ayuda que me hables de la situación y no de cómo soy.',
+    help: 'Cuando haya algo que mejorar, háblame con cuidado y recuérdame lo que valoras de mí.',
+    plus: 'Te muestras sin miedo a que descubran algo “malo” en ti.'
+  },
+  /* ---------------- CONFLICTO ---------------- */
+  critica: {
+    name: 'Crítica', pol: 'risk', sec: 'conflicto',
+    low: 'Puedes expresar molestias sin atacar a la persona.',
+    mid: 'A veces tus quejas se convierten en críticas a cómo es tu pareja.',
+    high: 'En los desacuerdos tiendes a señalar cómo es tu pareja (“tú siempre…”) en lugar de lo que pasó. Gottman encontró que este patrón desgasta mucho las relaciones.',
+    ex: ['Usa un inicio suave: “Me sentí ___ cuando pasó ___. ¿Podríamos ___?”.', 'Elimina “siempre” y “nunca” de tus discusiones.', 'Habla de una situación concreta, no de la personalidad.'],
+    need: 'Estoy aprendiendo a decir lo que me molesta sin atacar; si se me sale una crítica, ayúdame a volver al tema.',
+    help: 'Si sueno a crítica, dime con calma: “¿me lo dices de otra forma?”.',
+    plus: 'Expresas tus molestias sin atacar a la persona.'
+  },
+  defensa: {
+    name: 'Actitud defensiva', pol: 'risk', sec: 'conflicto',
+    low: 'Puedes escuchar una queja y reconocer tu parte sin sentirte en peligro.',
+    mid: 'En ocasiones te justificas antes de escuchar del todo.',
+    high: 'Ante una queja, tu primer impulso es justificarte o contraatacar. Es una forma de protegerte, pero hace que tu pareja no se sienta escuchada.',
+    ex: ['Busca la parte de verdad que tiene la queja, aunque sea pequeña, y reconócela.', 'Antes de explicar, repite lo que entendiste.', 'Practica empezar con: “Tienes razón en que…”.'],
+    need: 'Cuando me reclamas, a veces me defiendo antes de escuchar; estoy aprendiendo a hacerme responsable de mi parte.',
+    help: 'Plantéame las quejas con calma: me es más fácil reconocer mi parte cuando no siento un ataque.',
+    plus: 'Asumes tu parte de responsabilidad sin ponerte a la defensiva.'
+  },
+  desprecio: {
+    name: 'Desprecio', pol: 'risk', sec: 'conflicto',
+    low: 'Mantienes el respeto incluso en los desacuerdos.',
+    mid: 'Ocasionalmente aparecen el sarcasmo o los gestos de fastidio.',
+    high: 'El sarcasmo, la burla o sentirte por encima aparecen en los conflictos. Gottman lo identifica como el predictor más fuerte de ruptura, así que vale la pena atenderlo con prioridad.',
+    ex: ['Detecta el resentimiento acumulado detrás del desprecio y háblalo a tiempo.', 'Construyan una cultura de aprecio: un agradecimiento concreto al día.', 'Si sientes desprecio, pide una pausa antes de hablar.'],
+    need: 'Si alguna vez sueno con sarcasmo, suele haber un enojo acumulado; quiero aprender a decirlo antes.',
+    help: 'Si notas sarcasmo en mí, detén la conversación con calma y pregúntame qué me pasa.',
+    plus: 'Mantienes el respeto incluso cuando hay desacuerdo.'
+  },
+  evasion: {
+    name: 'Evasión (cerrarse)', pol: 'risk', sec: 'conflicto',
+    low: 'Puedes quedarte en una conversación difícil sin desconectarte.',
+    mid: 'A veces evitas temas difíciles o te cierras cuando la tensión sube.',
+    high: 'Cuando el conflicto sube, te cierras o te alejas. Suele ser una forma de manejar la saturación, pero tu pareja puede vivirlo como abandono.',
+    ex: ['Pide una pausa en lugar de desaparecer: “Necesito 20 minutos y regreso”.', 'Durante la pausa haz algo que te calme; evita repasar la pelea en tu cabeza.', 'Regresa a la conversación cuando dijiste que lo harías.'],
+    need: 'Cuando una discusión me satura, me cierro. No es indiferencia: necesito una pausa para poder regresar.',
+    help: 'Si me ves en silencio, ofréceme una pausa y acordemos cuándo retomar.',
+    plus: 'Te quedas presente en las conversaciones difíciles.'
+  },
+  reparacion: {
+    name: 'Capacidad de reparar', pol: 'good', sec: 'conflicto',
+    low: 'Después de una pelea te cuesta reconectar, pedir perdón o aceptar las disculpas.',
+    mid: 'Sueles reparar después de los conflictos, aunque a veces te toma tiempo.',
+    high: 'Sabes reconectar después de un conflicto. Según Gottman, es una de las habilidades más importantes de las parejas que funcionan.',
+    ex: ['Acuerden una frase o gesto de “tregua” (una broma, tomarse de la mano).', 'Pide perdón de forma específica: “Perdón por ___; la próxima vez voy a ___”.', 'Acepta los intentos de reparación aunque no sean perfectos.'],
+    need: 'Después de discutir me cuesta dar el primer paso; un gesto tuyo de acercamiento me ayuda mucho.',
+    help: 'Acércate con un gesto sencillo después de una pelea; yo también estoy aprendiendo a hacerlo.',
+    plus: 'Sabes reparar y reconectar después de un conflicto.'
+  },
+  regulacion: {
+    name: 'Regulación emocional', pol: 'good', sec: 'conflicto',
+    low: 'En los conflictos tus emociones te desbordan con facilidad y es difícil pensar con claridad.',
+    mid: 'Generalmente manejas tus emociones, aunque en discusiones intensas a veces te desbordas.',
+    high: 'Puedes sentir enojo sin que te domine; sabes pausar y calmarte.',
+    ex: ['Aprende tu señal física de saturación (pulso acelerado, calor) y haz una pausa en ese momento.', 'Respira más lento: inhala en 4 tiempos y exhala en 6, durante dos minutos.', 'Nombra la emoción en voz alta; eso reduce su intensidad.'],
+    need: 'Cuando me enojo puedo reaccionar fuerte; estoy aprendiendo a pausar y te pido paciencia mientras lo hago.',
+    help: 'Si notas que el enojo me desborda, sugiéreme una pausa sin tomarla como rechazo.',
+    plus: 'Manejas tus emociones con calma incluso en los conflictos.'
+  },
+  /* ---------------- FORTALEZAS ---------------- */
+  apertura: {
+    name: 'Apertura emocional', pol: 'good', sec: 'aporto',
+    low: 'Te cuesta mostrar tu mundo interior; abrirte puede sentirse arriesgado.',
+    mid: 'Te abres emocionalmente, aunque con ciertos temas o momentos te reservas.',
+    high: 'Puedes mostrarte vulnerable, y eso crea intimidad real.',
+    ex: ['Comparte cada día una emoción con tu pareja, aunque sea pequeña.', 'Usen preguntas profundas como punto de partida, por ejemplo: “¿qué te preocupa últimamente?”.', 'Recuerda que mostrarte vulnerable también es una forma de valentía.'],
+    need: 'Abrirme me cuesta; cuando lo hago, me ayuda que me escuches sin juzgar.',
+    help: 'Crea momentos tranquilos para hablar y valora cuando comparto algo personal.',
+    plus: 'Te muestras vulnerable y eso crea intimidad real.'
+  },
+  asertividad: {
+    name: 'Comunicación asertiva', pol: 'good', sec: 'aporto',
+    low: 'Te cuesta expresar lo que necesitas con claridad; puede que calles o que explotes.',
+    mid: 'Te comunicas bien en general, aunque en algunos temas te cuesta ser claro o clara.',
+    high: 'Expresas lo que sientes y necesitas con claridad y respeto.',
+    ex: ['Usa la fórmula: “Yo siento ___ cuando ___ y necesito ___”.', 'Practica decir lo que te molesta en las primeras 24 horas, no a los tres meses.', 'Escribe lo que quieres decir antes de una conversación difícil.'],
+    need: 'No siempre sé expresar lo que necesito; preguntarme ayuda.',
+    help: 'Pregúntame directamente qué necesito y dame tiempo para responder.',
+    plus: 'Expresas lo que sientes con claridad y respeto.'
+  },
+  empatia: {
+    name: 'Empatía', pol: 'good', sec: 'aporto',
+    low: 'En momentos de tensión te cuesta ponerte en el lugar de tu pareja.',
+    mid: 'Sueles entender a tu pareja, aunque cuando estás bajo estrés te enfocas más en tu punto de vista.',
+    high: 'Sabes escuchar y entender a tu pareja, incluso cuando piensas distinto.',
+    ex: ['Antes de responder, resume lo que entendiste: “Lo que te escucho decir es…”.', 'Pregunta “¿qué sentiste?” antes de “¿qué pasó?”.', 'Valida aunque no estés de acuerdo: “Tiene sentido que te sientas así”.'],
+    need: 'A veces me enfoco en mi punto de vista; recuérdame cómo te sientes tú.',
+    help: 'Dime cómo te sientes de forma explícita; me ayuda a entenderte mejor.',
+    plus: 'Escuchas y entiendes a tu pareja aun cuando piensas distinto.'
+  },
+  compromiso: {
+    name: 'Compromiso', pol: 'good', sec: 'aporto',
+    low: 'Comprometerte a largo plazo te genera dudas, o prefieres no proyectar el futuro.',
+    mid: 'Te comprometes, aunque a veces dudas o prefieres ir paso a paso.',
+    high: 'Cuando eliges a alguien, apuestas de verdad y te quedas en las dificultades.',
+    ex: ['Explora qué te hace dudar: ¿la persona, el momento o el compromiso en sí?', 'Hablen del futuro en pasos pequeños (los próximos meses).', 'Identifica qué necesitas para sentir seguridad al comprometerte.'],
+    need: 'El compromiso me cuesta y prefiero ir paso a paso; hablar del futuro sin presión me ayuda.',
+    help: 'Hablemos de planes concretos y cercanos, sin presionar el largo plazo.',
+    plus: 'Apuestas de verdad por la relación y te quedas en las dificultades.'
+  },
+  pasion: {
+    name: 'Pasión', pol: 'good', sec: 'aporto',
+    low: 'La pasión y el romance no son prioridad para ti en este momento, o te cuesta expresarlos.',
+    mid: 'Valoras la pasión, aunque la rutina a veces la desplaza.',
+    high: 'Cuidas el deseo, el juego y el romance en la relación.',
+    ex: ['Planeen una cita distinta a la rutina al menos una vez al mes.', 'Habla abiertamente de lo que te gusta y lo que deseas.', 'Recuperen algo que hacían al inicio de la relación.'],
+    need: 'La pasión se me apaga con la rutina; los momentos nuevos juntos me reconectan.',
+    help: 'Propón planes nuevos o sorpresas de vez en cuando.',
+    plus: 'Cuidas el deseo, el juego y el romance.'
+  },
+  aprecio: {
+    name: 'Admiración y aprecio', pol: 'good', sec: 'aporto',
+    low: 'Te es más fácil ver lo que falta que lo que funciona en tu pareja.',
+    mid: 'Valoras a tu pareja, aunque no siempre lo expresas.',
+    high: 'Expresas admiración y gratitud, y eso protege mucho a la relación.',
+    ex: ['Cada día di una cosa concreta que agradeces a tu pareja.', 'Escribe una lista de cualidades que admiras de tu pareja.', 'Comenta en voz alta los pequeños gestos que notas.'],
+    need: 'No siempre expreso lo que valoro, pero lo siento; estoy aprendiendo a decirlo más.',
+    help: 'Pídeme con cariño que te diga lo que valoro de ti cuando lo necesites escuchar.',
+    plus: 'Expresas admiración y gratitud hacia tu pareja.'
+  },
+  limites: {
+    name: 'Límites sanos', pol: 'good', sec: 'aporto',
+    low: 'Te cuesta poner límites o respetar los de tu pareja sin sentir culpa o rechazo.',
+    mid: 'Pones límites en lo importante, aunque a veces con culpa o con retraso.',
+    high: 'Pones límites con claridad y respetas los de tu pareja.',
+    ex: ['Identifica una situación en la que te cuesta decir que no y prepara tu frase.', 'Recuerda que un límite cuida la relación, no la ataca.', 'Cuando tu pareja ponga un límite, agradécelo en lugar de discutirlo.'],
+    need: 'Estoy aprendiendo a poner límites; cuando lo hago no es contra ti, es para cuidarnos.',
+    help: 'Respeta mis límites aunque te sorprendan y dime también los tuyos con claridad.',
+    plus: 'Pones y respetas límites con claridad.'
+  },
+  autonomia: {
+    name: 'Autonomía', pol: 'good', sec: 'aporto',
+    low: 'Tu vida tiende a girar en torno a la relación; tener espacios propios te cuesta o te genera culpa.',
+    mid: 'Tienes espacios propios, aunque a veces los dejas de lado por la relación.',
+    high: 'Mantienes tu identidad, tus intereses y tus vínculos fuera de la relación.',
+    ex: ['Retoma un interés o una amistad que hayas dejado.', 'Agenda tiempo a solas sin sentir que abandonas a tu pareja.', 'Apoya los espacios propios de tu pareja como algo positivo.'],
+    need: 'A veces me pierdo en la relación; me ayuda que me animes a cuidar mis espacios.',
+    help: 'Anímame a tener mis espacios y mis amistades.',
+    plus: 'Mantienes tu identidad y tus espacios propios.'
+  },
+  curiosidad: {
+    name: 'Curiosidad por tu pareja', pol: 'good', sec: 'aporto',
+    low: 'Quizá das por hecho que ya conoces a tu pareja y has dejado de preguntar.',
+    mid: 'Te interesa el mundo de tu pareja, aunque la rutina a veces apaga la curiosidad.',
+    high: 'Mantienes curiosidad por el mundo interior de tu pareja; Gottman lo llama tener buenos “mapas del amor”.',
+    ex: ['Haz una pregunta abierta cada semana: “¿qué sueño tienes ahora?”.', 'Pregunta por detalles de su día, no solo “¿cómo te fue?”.', 'Actualiza lo que sabes: las personas cambian, y lo que sabías hace un año puede ya no ser cierto.'],
+    need: 'Me gusta que me conozcas a fondo; pregúntame por mis sueños y preocupaciones.',
+    help: 'Hazme preguntas sobre lo que estoy viviendo y lo que sueño.',
+    plus: 'Mantienes viva la curiosidad por el mundo de tu pareja.'
+  },
+  /* ---------------- ANHELOS ---------------- */
+  an_estabilidad: { name: 'Estabilidad y seguridad', pol: 'info', sec: 'anhelos', d: 'Un vínculo predecible y seguro, donde descansar.' },
+  an_profundidad: { name: 'Conexión profunda', pol: 'info', sec: 'anhelos', d: 'Ser vista o visto de verdad, sin máscaras.' },
+  an_crecimiento: { name: 'Crecimiento personal', pol: 'info', sec: 'anhelos', d: 'Una relación que impulse a ambos a ser su mejor versión.' },
+  an_aventura: { name: 'Aventura y novedad', pol: 'info', sec: 'anhelos', d: 'Experiencias nuevas, viajes, sorpresas compartidas.' },
+  an_proyecto: { name: 'Proyecto de vida', pol: 'info', sec: 'anhelos', d: 'Construir algo en común a largo plazo.' },
+  an_libertad: { name: 'Libertad y espacio', pol: 'info', sec: 'anhelos', d: 'Que cada quien conserve su individualidad.' },
+  an_equipo: { name: 'Compañerismo', pol: 'info', sec: 'anhelos', d: 'Complicidad, amistad y sentirse en el mismo equipo.' },
+  an_pasion: { name: 'Pasión y romance', pol: 'info', sec: 'anhelos', d: 'Deseo y romance que se mantengan con el tiempo.' },
+  /* ---------------- LENGUAJES DE AFECTO ---------------- */
+  lr_palabras: { name: 'Palabras de afirmación', pol: 'info', sec: 'amor' },
+  lr_tiempo: { name: 'Tiempo de calidad', pol: 'info', sec: 'amor' },
+  lr_actos: { name: 'Actos de servicio', pol: 'info', sec: 'amor' },
+  lr_contacto: { name: 'Contacto físico', pol: 'info', sec: 'amor' },
+  lr_detalles: { name: 'Detalles y regalos', pol: 'info', sec: 'amor' },
+  lg_palabras: { name: 'Palabras de afirmación', pol: 'info', sec: 'amor' },
+  lg_tiempo: { name: 'Tiempo de calidad', pol: 'info', sec: 'amor' },
+  lg_actos: { name: 'Actos de servicio', pol: 'info', sec: 'amor' },
+  lg_contacto: { name: 'Contacto físico', pol: 'info', sec: 'amor' },
+  lg_detalles: { name: 'Detalles y regalos', pol: 'info', sec: 'amor' }
+};
+
+const LOVE = {
+  palabras: { name: 'Palabras de afirmación', receive: 'escuchar palabras de cariño y reconocimiento', help: 'Dime con palabras lo que sientes y lo que valoras de mí; un mensaje inesperado me cambia el día.' },
+  tiempo: { name: 'Tiempo de calidad', receive: 'compartir tiempo de calidad, sin distracciones', help: 'Regálame tiempo juntos sin celular ni prisas, aunque sea poco.' },
+  actos: { name: 'Actos de servicio', receive: 'que me ayuden o me faciliten la vida', help: 'Ayúdame con algo que sabes que me pesa, sin que te lo pida.' },
+  contacto: { name: 'Contacto físico', receive: 'los abrazos, las caricias y la cercanía física', help: 'Abrázame, tómame de la mano: el contacto me reconecta contigo.' },
+  detalles: { name: 'Detalles y regalos', receive: 'recibir detalles pensados especialmente para mí', help: 'Sorpréndeme con un detalle que muestre que pensaste en mí.' }
+};
+
+const ATTACHMENT = {
+  seguro: {
+    name: 'Seguro', emoji: '🌳',
+    text: 'Te sientes bien con la cercanía y también con tu independencia. Confías en el vínculo y puedes hablar de lo que sientes. No significa que no tengas retos, sino que tienes una base sólida para enfrentarlos.',
+    need: 'En general me siento en seguridad dentro del vínculo; valoro mucho la comunicación abierta y honesta.'
+  },
+  ansioso: {
+    name: 'Ansioso', emoji: '🌊',
+    text: 'Valoras mucho la cercanía y tiendes a preocuparte por perderla. Puedes estar muy pendiente de las señales de distancia y necesitar confirmación. Tu gran fortaleza es tu capacidad de entrega y de conexión.',
+    need: 'Necesito constancia y señales claras de que estamos bien; con eso me relajo y doy lo mejor de mí.'
+  },
+  evitativo: {
+    name: 'Evitativo', emoji: '🏔️',
+    text: 'Valoras mucho tu independencia y la cercanía intensa puede incomodarte. Tiendes a resolver las cosas por tu cuenta. Tu fortaleza es la autonomía y la calma en lo práctico; tu reto, dejar que te acompañen.',
+    need: 'Necesito espacio y que la cercanía se construya sin presión; así me abro más.'
+  },
+  temeroso: {
+    name: 'Temeroso (desorganizado)', emoji: '🌗',
+    text: 'Deseas la cercanía y a la vez te da miedo, así que puedes oscilar entre buscar a tu pareja y alejarte. Suele estar relacionado con experiencias tempranas difíciles. Con trabajo personal, idealmente con apoyo profesional, puede transformarse.',
+    need: 'A veces quiero cercanía y al mismo tiempo me da miedo; la paciencia y la coherencia me ayudan a sentirme en seguridad.'
+  }
+};
+
+/* Ejes de la gráfica radar: cada eje combina dimensiones (las 'risk' se invierten). */
+const RADAR_AXES = [
+  { id: 'seguridad', name: 'Seguridad emocional', parts: ['-ansiedad', '-evitacion'] },
+  { id: 'autoestima', name: 'Autoestima', parts: ['valia', '-comparacion', '-validacion'] },
+  { id: 'comunicacion', name: 'Comunicación', parts: ['asertividad', 'empatia', 'apertura'] },
+  { id: 'conflicto', name: 'Manejo del conflicto', parts: ['reparacion', 'regulacion', '-critica', '-defensa', '-desprecio', '-evasion'] },
+  { id: 'limites', name: 'Límites y autonomía', parts: ['limites', 'autonomia', '-subyugacion', '-autosacrificio'] },
+  { id: 'compromiso', name: 'Compromiso', parts: ['compromiso'] },
+  { id: 'pasion', name: 'Pasión', parts: ['pasion'] },
+  { id: 'conexion', name: 'Admiración y conexión', parts: ['aprecio', 'curiosidad'] }
+];
+
+/* Secciones del reporte (también son las opciones al compartir). */
+const SECTIONS = [
+  { id: 'resumen', name: 'Resumen y estilo de apego', share: true },
+  { id: 'fortalezas', name: 'Puntos fuertes', share: true },
+  { id: 'trabajar', name: 'Áreas a trabajar', share: true },
+  { id: 'miedos', name: 'Mis miedos', share: true },
+  { id: 'inseguridades', name: 'Mis inseguridades', share: true },
+  { id: 'heridas', name: 'Heridas y patrones', share: false, sensitive: true },
+  { id: 'anhelos', name: 'Lo que anhelo', share: true },
+  { id: 'amor', name: 'Cómo doy y recibo amor', share: true },
+  { id: 'conflicto', name: 'Cómo manejo el conflicto', share: true },
+  { id: 'pareja', name: 'Lo que mi pareja debería saber de mí', share: true },
+  { id: 'abiertas', name: 'Mis respuestas abiertas', share: false, sensitive: true }
+];
+
+const SECTION_DIMS = {
+  miedos: ['abandono', 'rechazo', 'absorcion', 'traicion'],
+  inseguridades: ['valia', 'comparacion', 'validacion', 'presion'],
+  heridas: ['privacion', 'autosacrificio', 'subyugacion', 'exigencia', 'verguenza'],
+  anhelos: ['an_estabilidad', 'an_profundidad', 'an_crecimiento', 'an_aventura', 'an_proyecto', 'an_libertad', 'an_equipo', 'an_pasion'],
+  amor: ['lr_palabras', 'lr_tiempo', 'lr_actos', 'lr_contacto', 'lr_detalles', 'lg_palabras', 'lg_tiempo', 'lg_actos', 'lg_contacto', 'lg_detalles'],
+  conflicto: ['critica', 'defensa', 'desprecio', 'evasion', 'reparacion', 'regulacion']
+};
+
+const CONVO_QUESTIONS = [
+  '¿Qué resultado tuyo te sorprendió más y por qué?',
+  '¿Qué parte de mis resultados te ayudó a entenderme mejor?',
+  '¿Qué necesitas de mí cuando aparecen tus miedos o inseguridades?',
+  '¿Cómo te gustaría que manejáramos nuestras discusiones de ahora en adelante?',
+  '¿Qué gesto mío hace que sientas más mi amor? ¿Y cuál extrañas?',
+  '¿Qué anhelo tuyo te gustaría que construyéramos juntos?',
+  '¿Qué patrón de relaciones pasadas no queremos repetir?',
+  '¿Qué señal podemos acordar para pedir una pausa cuando una discusión sube de tono?',
+  '¿Qué espacios propios necesita cada quien para sentirse bien?',
+  '¿Qué pequeño cambio podemos hacer esta semana para cuidarnos?'
+];
+
+const CONVO_RULES = [
+  'Elijan un momento tranquilo, sin prisas ni cansancio.',
+  'Hablen en primera persona: “yo siento”, “yo necesito”.',
+  'Uno habla y el otro escucha; antes de responder, resuman lo que entendieron.',
+  'Los resultados son para entenderse, nunca para usarse como arma (“ves, tú eres…”).',
+  'Si la tensión sube, hagan una pausa de 20 minutos y retomen.',
+  'Cierren diciendo algo que agradecen de la otra persona.'
+];
+
+/* =====================================================================
+   LÓGICA DE LA APLICACIÓN
+   ===================================================================== */
+(function () {
+  'use strict';
+
+  const LS_KEY = 'lazos_state_v1';
+  const THEME_KEY = 'lazos_theme';
+  const PENDING_KEY = 'lazos_pending_partner';
+  const PAYLOAD_V = 1;
+  const app = document.getElementById('app');
+
+  /* ---------- Utilidades ---------- */
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const clamp = n => Math.max(0, Math.min(100, Math.round(Number(n) || 0)));
+  const lvl = s => s < 35 ? 'low' : s < 65 ? 'mid' : 'high';
+  const avg = a => { const v = a.filter(x => typeof x === 'number' && !isNaN(x)); return v.length ? v.reduce((p, c) => p + c, 0) / v.length : undefined; };
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } },
+    del(k) { try { localStorage.removeItem(k); } catch (e) { } }
+  };
+  function toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+  async function copy(text) {
+    try { await navigator.clipboard.writeText(text); toast('Copiado al portapapeles'); }
+    catch (e) {
+      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); toast('Copiado al portapapeles'); } catch (_) { toast('No se pudo copiar'); }
+      ta.remove();
+    }
+  }
+  function b64e(str) {
+    const bytes = new TextEncoder().encode(str); let bin = '';
+    bytes.forEach(b => bin += String.fromCharCode(b));
+    return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+  function b64d(s) {
+    s = s.replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '=';
+    const bin = atob(s); const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  const baseUrl = () => location.href.split('#')[0];
+  const fmtDate = d => { try { return new Date(d).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { return ''; } };
+
+  /* ---------- Tema ---------- */
+  function applyTheme(t) { if (t) document.documentElement.setAttribute('data-theme', t); else document.documentElement.removeAttribute('data-theme'); }
+  applyTheme(store.get(THEME_KEY));
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = cur === 'dark' ? 'light' : 'dark'; applyTheme(next); store.set(THEME_KEY, next);
+  });
+  document.getElementById('homeBtn').addEventListener('click', () => { history.replaceState(null, '', baseUrl()); route(); });
+
+  /* ---------- Estado ---------- */
+  const fresh = () => ({ meta: { name: '', sit: '', est: '', social: false }, answers: {}, open: {}, step: 0, started: false, done: false, profile: null });
+  let S = Object.assign(fresh(), store.get(LS_KEY) || {});
+  const save = () => store.set(LS_KEY, S);
+
+  function buildSteps() {
+    const steps = [];
+    BLOCKS.forEach(b => {
+      if (b.optional && !S.meta.social) return;
+      steps.push({ k: 'intro', b });
+      b.items.forEach((it, i) => steps.push({ k: 'q', b, it, id: b.id + '_' + i }));
+    });
+    steps.push({ k: 'open' });
+    return steps;
+  }
+  const questionSteps = () => buildSteps().filter(s => s.k === 'q');
+
+  /* ---------- Router ---------- */
+  function route() {
+    window.scrollTo(0, 0);
+    const h = location.hash;
+    if (h.startsWith('#r=')) return renderShared(h.slice(3));
+    if (h.startsWith('#comparar')) return renderCompareInput();
+    if (S.done && S.profile) return renderResults();
+    if (S.started) return renderStep();
+    return renderIntro();
+  }
+  window.addEventListener('hashchange', route);
+
+  /* =====================================================================
+     PANTALLA DE INICIO
+     ===================================================================== */
+  function renderIntro() {
+    const total = BLOCKS.filter(b => !b.optional).reduce((n, b) => n + b.items.length, 0);
+    const inProgress = S.started && !S.done && Object.keys(S.answers).length > 0;
+    app.innerHTML = `
+    <section class="hero fade">
+      ${heroArt()}
+      <h1>Lazos</h1>
+      <p class="lead">Un cuestionario de autoconocimiento para entender cómo amas, qué temes, qué anhelas y qué aportas a una relación. Y para compartirlo con tu pareja, si así lo decides.</p>
+      <div class="row" style="justify-content:center">
+        ${inProgress ? `<button class="btn btn-primary" id="cont">Continuar donde me quedé</button><button class="btn btn-ghost" id="restart">Empezar de nuevo</button>`
+        : `<button class="btn btn-primary" id="start">Comenzar</button>`}
+      </div>
+      <p class="small muted" style="margin-top:12px">${total} preguntas · 25 a 30 minutos · puedes pausar y continuar después</p>
+    </section>
+    <div class="card fade">
+      <h2>¿Qué vas a descubrir?</h2>
+      <div class="grid2">
+        ${[['🔗', 'Tu estilo de apego', 'Cómo buscas cercanía y cómo te proteges.'],
+        ['🌱', 'Tus puntos fuertes', 'Lo que ya aportas a una relación.'],
+        ['🧭', 'Tus áreas a trabajar', 'Con ejercicios prácticos para cada una.'],
+        ['🌧️', 'Tus miedos e inseguridades', 'Nombrarlos les quita fuerza.'],
+        ['🧵', 'Heridas y patrones', 'Lo que traes de tu historia.'],
+        ['💞', 'Cómo das y recibes amor', 'Y lo que más anhelas en pareja.']]
+        .map(f => `<div class="feature"><span class="ic" aria-hidden="true">${f[0]}</span><div><strong>${f[1]}</strong><div class="small muted">${f[2]}</div></div></div>`).join('')}
+      </div>
+    </div>
+    <div class="card fade">
+      <h2>Para todas las personas y todas las relaciones</h2>
+      <p>No importa tu orientación sexual, tu identidad de género ni cómo esté organizada tu relación. Las preguntas usan lenguaje neutro y se basan en investigaciones de psicología que aplican a cualquier pareja: la teoría del apego, la terapia de esquemas, el trabajo de John Gottman y la teoría triangular del amor de Sternberg.</p>
+      <p class="muted small">Si hoy no tienes pareja, puedes contestarlo pensando en tu relación más reciente o en cómo sueles ser cuando estás en una.</p>
+    </div>
+    <div class="card soft fade">
+      <h3>🔒 Tu privacidad</h3>
+      <p class="small">Tus respuestas se guardan solo en este navegador. No se envían a ningún servidor. Si decides compartir tus resultados, tú eliges qué secciones incluir.</p>
+      <div class="note small"><strong>Importante:</strong> esta es una herramienta de autoexploración, no un diagnóstico psicológico ni un sustituto de la terapia. Si en tu relación hay violencia, control o sientes miedo de tu pareja, busca apoyo profesional o las líneas de atención de tu país.</div>
+    </div>`;
+    const go = () => { if (!S.meta.sit) renderSetup(); else { S.started = true; save(); renderStep(); } };
+    on('#start', go); on('#cont', go);
+    on('#restart', () => { if (confirm('¿Seguro? Se borrarán tus respuestas guardadas.')) { S = fresh(); save(); renderSetup(); } });
+  }
+
+  function heroArt() {
+    return `<svg class="hero-art" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="46" cy="60" r="30" fill="none" stroke="var(--accent)" stroke-width="6"/>
+      <circle cx="74" cy="60" r="30" fill="none" stroke="var(--sage)" stroke-width="6"/>
+      <path d="M60 36a30 30 0 0 1 0 48a30 30 0 0 1 0-48z" fill="var(--rose)" opacity=".35"/></svg>`;
+  }
+  function on(sel, fn, ev = 'click') { const el = app.querySelector(sel); if (el) el.addEventListener(ev, fn); return el; }
+
+  /* =====================================================================
+     CONFIGURACIÓN INICIAL
+     ===================================================================== */
+  function renderSetup() {
+    const m = S.meta;
+    const radio = (name, val, label, cur) => `<label class="choice"><input type="radio" name="${name}" value="${val}" ${cur === val ? 'checked' : ''}> ${label}</label>`;
+    app.innerHTML = `
+    <div class="card fade">
+      <div class="eyebrow">Antes de empezar</div>
+      <h2>Cuéntanos un poco de ti</h2>
+      <p class="muted small">Todo es opcional excepto tu situación actual. Nada de esto sale de tu navegador.</p>
+      <form id="setup">
+        <div class="field" style="margin-bottom:20px">
+          <label class="lbl" for="name">¿Cómo quieres que te llamemos? <span class="muted small">(opcional)</span></label>
+          <input class="input" id="name" maxlength="40" autocomplete="given-name" value="${esc(m.name)}" placeholder="Tu nombre o apodo">
+        </div>
+        <fieldset>
+          <legend>¿Cuál es tu situación actual?</legend>
+          ${radio('sit', 'pareja', 'Estoy en una relación', m.sit)}
+          ${radio('sit', 'soltero', 'No tengo pareja en este momento', m.sit)}
+          ${radio('sit', 'saliendo', 'Estoy saliendo de una relación', m.sit)}
+        </fieldset>
+        <fieldset>
+          <legend>¿Cómo es (o suele ser) tu relación? <span class="muted small">(opcional)</span></legend>
+          ${radio('est', 'mono', 'Monógama', m.est)}
+          ${radio('est', 'abierta', 'Abierta o no monógama', m.est)}
+          ${radio('est', 'otra', 'Otra forma / prefiero no decir', m.est)}
+        </fieldset>
+        <fieldset>
+          <legend>Módulo opcional</legend>
+          <label class="choice"><input type="checkbox" id="social" ${m.social ? 'checked' : ''}> Incluir preguntas sobre la presión o falta de aceptación del entorno (familia, sociedad)</label>
+        </fieldset>
+        <p id="err" class="small" style="color:var(--accent)" role="alert"></p>
+        <div class="row" style="justify-content:space-between">
+          <button type="button" class="btn-link" id="back">Volver</button>
+          <button class="btn btn-primary" type="submit">Empezar el cuestionario</button>
+        </div>
+      </form>
+    </div>`;
+    on('#back', renderIntro);
+    on('#setup', e => {
+      e.preventDefault();
+      const f = e.target, sit = f.querySelector('input[name=sit]:checked'), est = f.querySelector('input[name=est]:checked');
+      if (!sit) { app.querySelector('#err').textContent = 'Elige tu situación actual para continuar.'; return; }
+      S.meta = { name: f.querySelector('#name').value.trim().slice(0, 40), sit: sit.value, est: est ? est.value : '', social: f.querySelector('#social').checked };
+      S.started = true; S.step = 0; save(); renderStep();
+    }, 'submit');
+  }
+
+  /* =====================================================================
+     CUESTIONARIO
+     ===================================================================== */
+  function renderStep() {
+    const steps = buildSteps();
+    if (S.step >= steps.length) S.step = steps.length - 1;
+    if (S.step < 0) S.step = 0;
+    const st = steps[S.step];
+    const qs = steps.filter(s => s.k === 'q');
+    const answered = qs.filter(q => S.answers[q.id]).length;
+    const pct = Math.round(answered / qs.length * 100);
+    const header = `<div class="qmeta"><span>${st.b ? esc(st.b.title) : 'Para cerrar'}</span><span>${answered} de ${qs.length}</span></div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Progreso"><div style="width:${pct}%"></div></div>`;
+
+    if (st.k === 'intro') {
+      const blocksAll = BLOCKS.filter(b => !b.optional || S.meta.social);
+      const bi = blocksAll.indexOf(st.b) + 1;
+      const showMonoHint = st.b.hintNonMono && (S.meta.est === 'abierta' || S.meta.est === 'otra');
+      app.innerHTML = `${header}
+      <div class="card fade" style="margin-top:14px">
+        <div class="block-ic" aria-hidden="true">${st.b.icon}</div>
+        <div class="eyebrow">Bloque ${bi} de ${blocksAll.length}</div>
+        <h2>${esc(st.b.title)}</h2>
+        <p>${esc(st.b.intro)}</p>
+        ${showMonoHint ? `<p class="hint">${esc(st.b.hintNonMono)}</p>` : ''}
+        ${S.meta.sit !== 'pareja' ? `<p class="hint">Cuando leas “mi pareja”, piensa en tu relación más reciente o significativa, o en cómo sueles ser en una relación.</p>` : ''}
+        <p class="small muted">${st.b.items.length} preguntas · No hay respuestas correctas: contesta lo que más se parezca a ti hoy.</p>
+        <div class="qnav">
+          <button class="btn-link" id="prev">${S.step > 0 ? '← Atrás' : 'Salir'}</button>
+          <button class="btn btn-primary" id="next">Empezar bloque</button>
+        </div>
+      </div>`;
+      on('#next', () => go(1));
+      on('#prev', () => S.step > 0 ? go(-1) : renderIntro());
+      app.querySelector('#next').focus();
+      return;
+    }
+
+    if (st.k === 'q') {
+      const [dim, text] = st.it;
+      const labels = SCALES[st.b.scale];
+      const cur = S.answers[st.id];
+      const n = qs.indexOf(st) + 1;
+      app.innerHTML = `${header}
+      <div class="card fade" style="margin-top:14px">
+        <div class="eyebrow">Pregunta ${n}</div>
+        <p class="qtext" id="qt">${esc(text)}</p>
+        <div class="likert" role="radiogroup" aria-labelledby="qt">
+          ${labels.map((l, i) => `<button type="button" role="radio" aria-checked="${cur === i + 1}" data-v="${i + 1}"><span class="k">${i + 1}</span>${esc(l)}</button>`).join('')}
+        </div>
+        <div class="qnav">
+          <button class="btn-link" id="prev">← Atrás</button>
+          <span class="small muted kbd-hint">Atajo: teclas 1–5</span>
+          <button class="btn btn-ghost" id="next" ${cur ? '' : 'disabled'}>Siguiente →</button>
+        </div>
+      </div>
+      <p class="small muted" style="text-align:center">Tu progreso se guarda automáticamente. <button class="btn-link" id="pause">Pausar y salir</button></p>`;
+      app.querySelectorAll('.likert button').forEach(btn => btn.addEventListener('click', () => answer(st.id, +btn.dataset.v)));
+      on('#prev', () => go(-1));
+      on('#next', () => go(1));
+      on('#pause', () => { toast('Progreso guardado'); renderIntro(); });
+      const focusBtn = app.querySelector('.likert button[aria-checked="true"]') || app.querySelector('.likert button');
+      focusBtn.focus({ preventScroll: true });
+      return;
+    }
+
+    /* Preguntas abiertas */
+    app.innerHTML = `${header}
+    <div class="card fade" style="margin-top:14px">
+      <div class="block-ic" aria-hidden="true">✍️</div>
+      <div class="eyebrow">Para cerrar · opcional</div>
+      <h2>En tus propias palabras</h2>
+      <p class="muted">Estas respuestas aparecerán en tu reporte solo si las escribes. Al compartir, tú decides si incluirlas.</p>
+      ${OPEN_QUESTIONS.map(q => `<div class="field" style="margin-bottom:16px"><label class="lbl" for="${q.id}">${esc(q.t)}</label><textarea id="${q.id}" maxlength="600">${esc(S.open[q.id] || '')}</textarea></div>`).join('')}
+      <div class="qnav">
+        <button class="btn-link" id="prev">← Atrás</button>
+        <button class="btn btn-primary" id="finish">Ver mis resultados</button>
+      </div>
+    </div>`;
+    app.querySelectorAll('textarea').forEach(t => t.addEventListener('input', () => { S.open[t.id] = t.value.slice(0, 600); save(); }));
+    on('#prev', () => go(-1));
+    on('#finish', finish);
+  }
+
+  function answer(id, v) {
+    S.answers[id] = v; save();
+    app.querySelectorAll('.likert button').forEach(b => b.setAttribute('aria-checked', String(+b.dataset.v === v)));
+    const nx = app.querySelector('#next'); if (nx) nx.disabled = false;
+    clearTimeout(answer._t); answer._t = setTimeout(() => go(1), 280);
+  }
+  function go(d) {
+    clearTimeout(answer._t);
+    const steps = buildSteps();
+    const st = steps[S.step];
+    if (d > 0 && st.k === 'q' && !S.answers[st.id]) return;
+    S.step = Math.max(0, Math.min(steps.length - 1, S.step + d)); save(); renderStep();
+    window.scrollTo(0, 0);
+  }
+  document.addEventListener('keydown', e => {
+    if (!app.querySelector('.likert') || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+    if (/^[1-5]$/.test(e.key)) { const b = app.querySelector(`.likert button[data-v="${e.key}"]`); if (b) b.click(); }
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'ArrowRight') { const nx = app.querySelector('#next'); if (nx && !nx.disabled) go(1); }
+  });
+
+  function finish() {
+    const missing = questionSteps().filter(q => !S.answers[q.id]);
+    if (missing.length) {
+      const steps = buildSteps(); S.step = steps.indexOf(steps.find(s => s.id === missing[0].id)); save();
+      toast(`Te faltan ${missing.length} preguntas por contestar`); renderStep(); return;
+    }
+    S.profile = computeProfile(); S.done = true; save();
+    renderResults();
+  }
+
+  /* =====================================================================
+     CÁLCULO DEL PERFIL
+     Cada respuesta va de 1 a 5 (los ítems invertidos se calculan como 6 − respuesta).
+     El puntaje de una dimensión es el promedio de sus ítems llevado a 0–100:
+        puntaje = (promedio − 1) / 4 × 100
+     ===================================================================== */
+  function computeProfile() {
+    const acc = {};
+    questionSteps().forEach(q => {
+      const v = S.answers[q.id]; if (!v) return;
+      const [dim, , rev] = q.it;
+      (acc[dim] = acc[dim] || []).push(rev ? 6 - v : v);
+    });
+    const s = {};
+    Object.keys(acc).forEach(k => s[k] = clamp((avg(acc[k]) - 1) / 4 * 100));
+    const P = {
+      v: PAYLOAD_V, n: S.meta.name, d: new Date().toISOString().slice(0, 10), sit: S.meta.sit,
+      sec: SECTIONS.map(x => x.id), s
+    };
+    derive(P);
+    P.o = {}; OPEN_QUESTIONS.forEach(q => { if ((S.open[q.id] || '').trim()) P.o[q.id] = S.open[q.id].trim(); });
+    return P;
+  }
+
+  /* Calcula radar, apego y listas a partir de los puntajes. */
+  function derive(P) {
+    const s = P.s;
+    const val = p => p[0] === '-' ? (s[p.slice(1)] == null ? undefined : 100 - s[p.slice(1)]) : s[p];
+    P.r = {}; RADAR_AXES.forEach(a => { const v = avg(a.parts.map(val)); if (v != null) P.r[a.id] = clamp(v); });
+    const A = s.ansiedad, V = s.evitacion;
+    P.a = { A, V, st: A > 50 && V > 50 ? 'temeroso' : A > 50 ? 'ansioso' : V > 50 ? 'evitativo' : 'seguro' };
+
+    // Fortalezas: dimensiones 'good' altas o 'risk' bajas (sin anhelos ni heridas).
+    const pool = Object.keys(DIMS).filter(k => s[k] != null && DIMS[k].pol !== 'info' && !['patrones', 'miedos'].includes(DIMS[k].sec) && k !== 'presion');
+    const eff = k => DIMS[k].pol === 'good' ? s[k] : 100 - s[k];
+    const sorted = pool.slice().sort((a, b) => eff(b) - eff(a));
+    let f = sorted.filter(k => eff(k) >= 65).slice(0, 6);
+    if (f.length < 3) f = sorted.slice(0, 3);
+    P.f = f;
+    let t = sorted.slice().reverse().filter(k => eff(k) < 50 && !f.includes(k)).slice(0, 6);
+    if (!t.length) t = sorted.slice().reverse().filter(k => !f.includes(k)).slice(0, 2);
+    P.t = t;
+
+    // Para la pareja: las necesidades más relevantes de todas las dimensiones.
+    const all = Object.keys(DIMS).filter(k => s[k] != null && DIMS[k].pol !== 'info' && DIMS[k].need);
+    P.p = all.filter(k => eff(k) < 50).sort((a, b) => eff(a) - eff(b)).slice(0, 5);
+    if (P.p.length < 2) P.p = all.sort((a, b) => eff(a) - eff(b)).slice(0, 2);
+
+    const top = (prefix) => Object.keys(LOVE).map(k => [k, s[prefix + k]]).filter(x => x[1] != null).sort((a, b) => b[1] - a[1]);
+    const an = SECTION_DIMS.anhelos.filter(k => s[k] != null).sort((a, b) => s[b] - s[a]);
+    P.top = { lr: (top('lr_')[0] || [])[0], lg: (top('lg_')[0] || [])[0], an: an.slice(0, 3) };
+    return P;
+  }
+
+  function helpFlags(P) {
+    const s = P.s, flags = [];
+    if (s.ansiedad >= 75) flags.push('ansiedad en el vínculo');
+    if (s.verguenza >= 70) flags.push('sensación de vergüenza o defecto');
+    if (s.privacion >= 70) flags.push('privación emocional');
+    if (s.valia != null && s.valia <= 25) flags.push('valía personal');
+    if (s.regulacion != null && s.regulacion <= 25) flags.push('regulación emocional');
+    if (s.abandono >= 80) flags.push('miedo al abandono');
+    return flags;
+  }
+
+  /* =====================================================================
+     COMPONENTES VISUALES
+     ===================================================================== */
+  function bar(score, pol, color) {
+    const c = color || (pol === 'info' ? 'var(--rose)' : (pol === 'good' ? (score >= 65 ? 'var(--sage)' : score >= 35 ? 'var(--amber)' : 'var(--accent)') : (score >= 65 ? 'var(--accent)' : score >= 35 ? 'var(--amber)' : 'var(--sage)')));
+    return `<div class="bar" aria-hidden="true"><div style="width:${Math.max(3, score)}%;background:${c}"></div></div>`;
+  }
+  function tag(score, pol) {
+    const l = lvl(score);
+    const label = { low: 'Bajo', mid: 'Medio', high: 'Alto' }[l];
+    let cls = 'mid';
+    if (pol === 'good') cls = l === 'high' ? 'good' : l === 'low' ? 'bad' : 'mid';
+    if (pol === 'risk') cls = l === 'high' ? 'bad' : l === 'low' ? 'good' : 'mid';
+    return `<span class="tag ${cls}">${label} · ${score}</span>`;
+  }
+  function isConcern(k, score) { const d = DIMS[k]; return d.pol === 'risk' ? score >= 50 : d.pol === 'good' ? score < 50 : false; }
+  function dimBlock(k, score, opts = {}) {
+    const d = DIMS[k]; if (!d || score == null) return '';
+    const showEx = opts.ex !== false && d.ex && isConcern(k, score);
+    return `<div class="dim">
+      <div class="dim-h"><strong>${esc(d.name)}</strong>${tag(score, d.pol)}</div>
+      ${bar(score, d.pol)}
+      <p style="margin:0">${esc(d[lvl(score)])}</p>
+      ${showEx ? `<details class="more" ${opts.open ? 'open' : ''}><summary>Ejercicios para trabajarlo</summary><ul class="ex">${d.ex.map(x => `<li>${esc(x)}</li>`).join('')}</ul></details>` : ''}
+    </div>`;
+  }
+
+  function radarSVG(series) {
+    const N = RADAR_AXES.length, cx = 200, cy = 175, R = 120;
+    const pt = (i, v) => { const a = -Math.PI / 2 + i * 2 * Math.PI / N; return [cx + Math.cos(a) * R * v / 100, cy + Math.sin(a) * R * v / 100]; };
+    let g = '';
+    [25, 50, 75, 100].forEach(lv => { g += `<polygon points="${RADAR_AXES.map((_, i) => pt(i, lv).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`; });
+    RADAR_AXES.forEach((a, i) => {
+      const [x, y] = pt(i, 100); g += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)"/>`;
+      const [lx, ly] = pt(i, 122); const anchor = Math.abs(lx - cx) < 10 ? 'middle' : lx > cx ? 'start' : 'end';
+      const words = a.name.split(' '); const lines = words.length > 2 ? [words.slice(0, 2).join(' '), words.slice(2).join(' ')] : words.length === 2 && a.name.length > 14 ? words : [a.name];
+      g += `<text x="${lx}" y="${ly - (lines.length - 1) * 7 + 4}" text-anchor="${anchor}" font-size="15" fill="var(--muted)">${lines.map((l, j) => `<tspan x="${lx}" dy="${j ? 17 : 0}">${esc(l)}</tspan>`).join('')}</text>`;
+    });
+    series.forEach(sr => {
+      const pts = RADAR_AXES.map((a, i) => pt(i, sr.r[a.id] == null ? 0 : sr.r[a.id]));
+      g += `<polygon points="${pts.map(p => p.join(',')).join(' ')}" fill="${sr.color}" fill-opacity=".18" stroke="${sr.color}" stroke-width="2.5" stroke-linejoin="round"/>`;
+      g += pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${sr.color}"/>`).join('');
+    });
+    const desc = series.map(sr => sr.label + ': ' + RADAR_AXES.map(a => `${a.name} ${sr.r[a.id] ?? '—'}`).join(', ')).join('. ');
+    return `<div class="radar-wrap"><svg viewBox="-60 0 520 350" role="img" aria-label="Gráfica radar. ${esc(desc)}">${g}</svg></div>`;
+  }
+
+  function attachSVG(points) {
+    const S0 = 200, pad = 20, inner = S0 - pad * 2;
+    const X = v => pad + inner * v / 100, Y = v => pad + inner * (1 - v / 100);
+    let g = `<rect x="${pad}" y="${pad}" width="${inner}" height="${inner}" rx="10" fill="var(--surface-2)"/>
+      <line x1="${X(50)}" y1="${pad}" x2="${X(50)}" y2="${pad + inner}" stroke="var(--line)" stroke-dasharray="4 4"/>
+      <line x1="${pad}" y1="${Y(50)}" x2="${pad + inner}" y2="${Y(50)}" stroke="var(--line)" stroke-dasharray="4 4"/>
+      <text x="${pad + 8}" y="${pad + inner - 8}" font-size="11" fill="var(--muted)">Seguro</text>
+      <text x="${pad + inner - 8}" y="${pad + inner - 8}" text-anchor="end" font-size="11" fill="var(--muted)">Ansioso</text>
+      <text x="${pad + 8}" y="${pad + 16}" font-size="11" fill="var(--muted)">Evitativo</text>
+      <text x="${pad + inner - 8}" y="${pad + 16}" text-anchor="end" font-size="11" fill="var(--muted)">Temeroso</text>
+      <text x="${S0 / 2}" y="${S0 - 3}" text-anchor="middle" font-size="10" fill="var(--muted)">Ansiedad →</text>
+      <text x="9" y="${S0 / 2}" text-anchor="middle" font-size="10" fill="var(--muted)" transform="rotate(-90 9 ${S0 / 2})">Evitación →</text>`;
+    points.forEach(p => { g += `<circle cx="${X(p.A)}" cy="${Y(p.V)}" r="9" fill="${p.color}" stroke="var(--surface)" stroke-width="3"/>`; });
+    return `<svg viewBox="0 0 ${S0} ${S0}" role="img" aria-label="Mapa de apego: ${points.map(p => `${esc(p.label)} ansiedad ${p.A}, evitación ${p.V}`).join('; ')}">${g}</svg>`;
+  }
+
+  /* =====================================================================
+     SECCIONES DEL REPORTE
+     ===================================================================== */
+  const ICONS = { resumen: '🧭', fortalezas: '🌱', trabajar: '🛠️', miedos: '🌧️', inseguridades: '🪞', heridas: '🧵', anhelos: '✨', amor: '💞', conflicto: '⚡', pareja: '🤝', abiertas: '✍️' };
+  const secWrap = (id, title, body, intro) => `<section class="card fade" id="sec-${id}" data-sec="${id}">
+    <div class="sec-title"><span class="ic" aria-hidden="true">${ICONS[id]}</span><h2>${esc(title)}</h2></div>
+    ${intro ? `<p class="muted">${intro}</p>` : ''}${body}</section>`;
+
+  function secResumen(P, own) {
+    if (!P.r || !P.a || P.a.A == null) return '';
+    const st = ATTACHMENT[P.a.st] || ATTACHMENT.seguro;
+    return secWrap('resumen', own ? 'Tu mapa en una mirada' : 'Su mapa en una mirada', `
+      ${radarSVG([{ r: P.r, color: 'var(--accent)', label: P.n || 'Perfil' }])}
+      <p class="small muted" style="text-align:center">Cada eje va de 0 (centro) a 100 (borde). Más hacia afuera indica más recursos en esa área.</p>
+      <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+      <div class="att">
+        ${attachSVG([{ A: P.a.A, V: P.a.V, color: 'var(--accent)', label: P.n || 'Perfil' }])}
+        <div>
+          <div class="eyebrow">Estilo de apego predominante</div>
+          <div class="big-badge"><span aria-hidden="true">${st.emoji}</span> ${esc(st.name)}</div>
+          <p style="margin-top:12px">${esc(st.text)}</p>
+          <p class="small muted">Ansiedad ${P.a.A} · Evitación ${P.a.V}. El apego no es una etiqueta fija: cambia con la experiencia, el autoconocimiento y las relaciones seguras.</p>
+        </div>
+      </div>`);
+  }
+
+  function secFortalezas(P, own) {
+    if (!P.f || !P.f.length) return '';
+    const body = `<ul class="list-plain">${P.f.filter(k => DIMS[k] && P.s[k] != null).map(k => `<li><span aria-hidden="true">✓</span><div><strong>${esc(DIMS[k].name)}</strong><div>${esc(DIMS[k].plus)}</div></div></li>`).join('')}</ul>
+      ${own ? `<p class="small muted" style="margin-top:12px">Estas fortalezas son recursos que ya tienes. Úsalas como punto de apoyo para trabajar lo demás.</p>` : ''}`;
+    return secWrap('fortalezas', own ? 'Tus puntos fuertes' : 'Sus puntos fuertes', body, own ? 'Lo que ya aportas a una relación.' : '');
+  }
+
+  function secTrabajar(P, own) {
+    if (!P.t || !P.t.length) return '';
+    const body = P.t.filter(k => DIMS[k] && P.s[k] != null).map(k => dimBlock(k, P.s[k], { open: true })).join('');
+    return secWrap('trabajar', own ? 'Tus áreas a trabajar' : 'Sus áreas a trabajar', body, 'No son defectos: son las áreas donde un pequeño cambio puede hacer una gran diferencia.');
+  }
+
+  function secList(id, title, intro, P) {
+    const keys = (SECTION_DIMS[id] || []).filter(k => P.s[k] != null);
+    if (!keys.length) return '';
+    return secWrap(id, title, keys.map(k => dimBlock(k, P.s[k])).join(''), intro);
+  }
+
+  function secHeridas(P, own) {
+    const keys = SECTION_DIMS.heridas.filter(k => P.s[k] != null);
+    if (!keys.length) return '';
+    const sorted = keys.slice().sort((a, b) => P.s[b] - P.s[a]);
+    return secWrap('heridas', 'Heridas y patrones', `
+      <div class="note small" style="margin-bottom:10px">Esto no es un diagnóstico de trauma. Son patrones aprendidos, inspirados en la terapia de esquemas, que suelen venir de experiencias tempranas. Tenerlos es humano; reconocerlos es el primer paso para que pierdan fuerza.</div>
+      ${sorted.map(k => dimBlock(k, P.s[k])).join('')}`);
+  }
+
+  function secAnhelos(P, own) {
+    const keys = SECTION_DIMS.anhelos.filter(k => P.s[k] != null).sort((a, b) => P.s[b] - P.s[a]);
+    if (!keys.length) return '';
+    const top = keys.slice(0, 3).map(k => DIMS[k].name.toLowerCase());
+    return secWrap('anhelos', own ? 'Lo que anhelas' : 'Lo que anhela', `
+      <p class="quote">Lo más importante ${own ? 'para ti' : ''} en una relación: ${esc(top.join(', ').replace(/, ([^,]*)$/, ' y $1'))}.</p>
+      ${keys.map(k => `<div class="dim"><div class="dim-h"><strong>${esc(DIMS[k].name)}</strong><span class="small muted">${P.s[k]}</span></div>${bar(P.s[k], 'info')}<div class="small muted">${esc(DIMS[k].d)}</div></div>`).join('')}
+      ${own ? `<p class="small muted" style="margin-top:12px">Los anhelos no se califican: muestran lo que buscas. Compararlos con los de tu pareja ayuda a ver dónde coinciden y qué conviene conversar.</p>` : ''}`);
+  }
+
+  function secAmor(P, own) {
+    const rows = Object.keys(LOVE).filter(k => P.s['lr_' + k] != null || P.s['lg_' + k] != null);
+    if (!rows.length) return '';
+    const sortR = rows.slice().sort((a, b) => (P.s['lr_' + b] || 0) - (P.s['lr_' + a] || 0));
+    const topR = sortR[0];
+    const topG = rows.slice().sort((a, b) => (P.s['lg_' + b] || 0) - (P.s['lg_' + a] || 0))[0];
+    const mismatch = topR !== topG;
+    return secWrap('amor', own ? 'Cómo das y recibes amor' : 'Cómo da y recibe amor', `
+      <div class="legend"><span style="--c:var(--rose)">Cómo ${own ? 'te gusta' : 'le gusta'} recibir</span><span style="--c:var(--sage)">Cómo ${own ? 'sueles' : 'suele'} dar</span></div>
+      ${sortR.map(k => `<div class="dim"><div class="dim-h"><strong>${esc(LOVE[k].name)}</strong><span class="small muted">recibir ${P.s['lr_' + k] ?? '—'} · dar ${P.s['lg_' + k] ?? '—'}</span></div>
+        ${bar(P.s['lr_' + k] || 0, 'info', 'var(--rose)')}<div class="bar b2" aria-hidden="true"><div style="width:${Math.max(3, P.s['lg_' + k] || 0)}%;background:var(--sage)"></div></div></div>`).join('')}
+      <p style="margin-top:12px">${own ? 'Te sientes' : 'Se siente'} más querida o querido con <strong>${esc(LOVE[topR].receive)}</strong>.
+      ${mismatch ? `Curiosamente, ${own ? 'tu' : 'su'} forma más natural de dar amor es otra: <strong>${esc(LOVE[topG].name.toLowerCase())}</strong>. Es común dar el amor como nos gustaría recibirlo… o como lo aprendimos. Vale la pena que la pareja lo sepa.` : `Además, ${own ? 'sueles' : 'suele'} dar amor de esa misma forma.`}</p>
+      <p class="small muted">Referencia: “lenguajes del amor” (Chapman). Úsalos como herramienta de conversación, no como verdad científica.</p>`);
+  }
+
+  function secConflicto(P, own) {
+    const keys = SECTION_DIMS.conflicto.filter(k => P.s[k] != null);
+    if (!keys.length) return '';
+    const horsemen = ['critica', 'defensa', 'desprecio', 'evasion'].filter(k => P.s[k] != null);
+    const worst = horsemen.sort((a, b) => P.s[b] - P.s[a])[0];
+    const antidote = { critica: 'el inicio suave (hablar de lo que sientes y necesitas, no de cómo es la otra persona)', defensa: 'asumir la responsabilidad de tu parte, aunque sea pequeña', desprecio: 'construir una cultura de aprecio y gratitud', evasion: 'pedir una pausa, calmarte y regresar a la conversación' };
+    return secWrap('conflicto', own ? 'Cómo manejas el conflicto' : 'Cómo maneja el conflicto', `
+      <p class="muted">Gottman describe cuatro patrones que desgastan una relación (crítica, actitud defensiva, desprecio y evasión) y dos habilidades que la protegen (reparar y regularse).</p>
+      ${keys.map(k => dimBlock(k, P.s[k])).join('')}
+      ${worst && P.s[worst] >= 35 ? `<div class="note sage small" style="margin-top:12px"><strong>Tu antídoto principal:</strong> en tu caso, el patrón más presente es “${esc(DIMS[worst].name.toLowerCase())}”. Su antídoto es ${esc(antidote[worst])}.</div>` : ''}`);
+  }
+
+  function secPareja(P, own) {
+    if (!P.p && !P.top && !P.a) return '';
+    const st = P.a && P.a.st ? ATTACHMENT[P.a.st] : null;
+    const needs = [];
+    if (st) needs.push(st.need);
+    if (P.top && P.top.lr && LOVE[P.top.lr]) needs.push(`Lo que más me llena es ${LOVE[P.top.lr].receive}.`);
+    if (P.top && P.top.lg && P.top.lr && P.top.lg !== P.top.lr && LOVE[P.top.lg]) needs.push(`Mi forma más natural de demostrar amor es con ${LOVE[P.top.lg].name.toLowerCase()}; si a veces no lo notas, fíjate ahí.`);
+    if (P.top && P.top.an && P.top.an.length) needs.push(`Lo que más busco en una relación: ${P.top.an.filter(k => DIMS[k]).map(k => DIMS[k].name.toLowerCase()).join(', ').replace(/, ([^,]*)$/, ' y $1')}.`);
+    (P.p || []).forEach(k => { if (DIMS[k] && DIMS[k].need) needs.push(DIMS[k].need); });
+    const helps = [];
+    if (P.top && P.top.lr && LOVE[P.top.lr]) helps.push(LOVE[P.top.lr].help);
+    (P.p || []).forEach(k => { if (DIMS[k] && DIMS[k].help) helps.push(DIMS[k].help); });
+    if (!needs.length) return '';
+    return secWrap('pareja', own ? 'Lo que tu pareja debería saber de ti' : 'Lo que quiere que sepas', `
+      ${own ? '<p class="muted">Escrito en primera persona para que puedas compartirlo tal cual. Habla de necesidades, no de reproches.</p>' : ''}
+      <ul class="list-plain">${needs.map(n => `<li><span aria-hidden="true">💬</span><div>${esc(n)}</div></li>`).join('')}</ul>
+      <h3 style="margin-top:22px">Cómo puedes acompañarme</h3>
+      <ul class="list-plain">${helps.map(n => `<li><span aria-hidden="true">🤲</span><div>${esc(n)}</div></li>`).join('')}</ul>`);
+  }
+
+  function secAbiertas(P, own) {
+    const items = OPEN_QUESTIONS.filter(q => P.o && P.o[q.id]);
+    if (!items.length) return '';
+    return secWrap('abiertas', own ? 'En tus propias palabras' : 'En sus propias palabras', items.map(q => `<div class="dim"><strong>${esc(q.t)}</strong><p class="quote" style="white-space:pre-wrap">${esc(P.o[q.id])}</p></div>`).join(''));
+  }
+
+  function renderSections(P, own) {
+    const has = id => P.sec.includes(id);
+    const map = {
+      resumen: secResumen, fortalezas: secFortalezas, trabajar: secTrabajar,
+      miedos: (P, o) => secList('miedos', o ? 'Tus miedos' : 'Sus miedos', 'Los miedos son mensajes de partes de ti que quieren protegerte. Conocerlos te permite decidir, en lugar de reaccionar.', P),
+      inseguridades: (P, o) => secList('inseguridades', o ? 'Tus inseguridades' : 'Sus inseguridades', 'Cómo te ves dentro de una relación y qué tanto depende eso de los demás.', P),
+      heridas: secHeridas, anhelos: secAnhelos, amor: secAmor, conflicto: secConflicto, pareja: secPareja, abiertas: secAbiertas
+    };
+    return SECTIONS.filter(x => has(x.id)).map(x => ({ id: x.id, name: x.name, html: map[x.id](P, own) })).filter(x => x.html);
+  }
+
+  /* =====================================================================
+     RESULTADOS PROPIOS
+     ===================================================================== */
+  function renderResults() {
+    const P = S.profile;
+    const secs = renderSections(P, true);
+    const flags = helpFlags(P);
+    const pending = store.get(PENDING_KEY);
+    app.innerHTML = `
+      <div class="fade">
+        <div class="eyebrow">Tus resultados · ${esc(fmtDate(P.d))}</div>
+        <h1>${P.n ? 'El mapa de ' + esc(P.n) : 'Tu mapa'}</h1>
+        <p class="muted">Lee con calma y con amabilidad hacia ti. Nada de esto te define para siempre: es una fotografía de hoy.</p>
+        <div class="toolbar">
+          <button class="btn btn-primary" id="share">Compartir con mi pareja</button>
+          <button class="btn btn-ghost" id="print">Guardar PDF</button>
+          <button class="btn btn-ghost" id="cmp">Comparar resultados</button>
+          <button class="btn btn-ghost" id="redo">Volver a hacerlo</button>
+        </div>
+        ${pending ? `<div class="shared-banner no-print"><strong>¿Comparar con ${esc(pending.n || 'tu pareja')}?</strong><p class="small" style="margin:4px 0 10px">Abriste sus resultados antes de hacer el cuestionario. Ya puedes compararlos.</p><button class="btn btn-primary" id="cmpPending">Comparar ahora</button></div>` : ''}
+        ${flags.length ? `<div class="card soft"><div class="note"><strong>Un cuidado especial para ti.</strong> Algunos resultados salieron altos (${esc(flags.join(', '))}). No significa que algo esté mal contigo; muchas personas cargan con esto. Hablarlo con un psicólogo o psicóloga puede darte mucho alivio y herramientas. Mereces ese acompañamiento.</div></div>` : ''}
+        <nav class="chips" aria-label="Secciones">${secs.map(x => `<a href="#sec-${x.id}" data-jump="${x.id}">${esc(x.name)}</a>`).join('')}</nav>
+      </div>
+      ${secs.map(x => x.html).join('')}
+      <div class="card soft fade">
+        <h3>¿Y ahora qué?</h3>
+        <ol class="q">
+          <li>Elige <strong>una</strong> área a trabajar y practica sus ejercicios durante dos semanas.</li>
+          <li>Comparte tus resultados con tu pareja y pídele que haga su propio cuestionario.</li>
+          <li>Usen la vista de comparación y la guía de conversación para hablar con calma.</li>
+          <li>Repite el cuestionario en unos meses y observa qué cambió.</li>
+        </ol>
+        <p class="small muted">Esta herramienta no sustituye la atención psicológica profesional.</p>
+      </div>
+      ${shareDialog()}`;
+    bindJump();
+    on('#share', () => openShare(P));
+    on('#print', () => doPrint());
+    on('#cmp', () => { location.hash = '#comparar'; });
+    on('#cmpPending', () => { const pd = store.get(PENDING_KEY); store.del(PENDING_KEY); renderCompare(S.profile, pd); });
+    on('#redo', () => { if (confirm('Se borrarán tus resultados actuales de este navegador. ¿Continuar?')) { S = fresh(); save(); renderSetup(); } });
+  }
+
+  function bindJump() {
+    app.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault(); const el = document.getElementById('sec-' + a.dataset.jump);
+      if (el) el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    }));
+  }
+
+  function doPrint(only) {
+    const secs = app.querySelectorAll('[data-sec]');
+    const opened = [];
+    app.querySelectorAll('details:not([open])').forEach(d => { d.open = true; opened.push(d); });
+    if (only) secs.forEach(s => { if (!only.includes(s.dataset.sec)) s.classList.add('print-hide'); });
+    const cleanup = () => { secs.forEach(s => s.classList.remove('print-hide')); opened.forEach(d => d.open = false); window.removeEventListener('afterprint', cleanup); };
+    window.addEventListener('afterprint', cleanup);
+    setTimeout(() => { window.print(); setTimeout(cleanup, 1000); }, 50);
+  }
+
+  /* =====================================================================
+     COMPARTIR
+     ===================================================================== */
+  function shareDialog() {
+    return `<dialog id="shareDlg" aria-labelledby="shareTitle"><div class="modal-in">
+      <div class="modal-head"><h2 id="shareTitle" style="margin:0">Compartir resultados</h2><button class="icon-btn" id="closeDlg" aria-label="Cerrar">✕</button></div>
+      <p class="small muted">Elige qué secciones quieres incluir. Lo que compartes es información personal: compártelo solo con alguien de confianza.</p>
+      <div id="shareOpts">${SECTIONS.map(x => `<label class="choice"><input type="checkbox" value="${x.id}" ${x.share ? 'checked' : ''}> ${esc(x.name)} ${x.sensitive ? '<span class="tag mid">sensible</span>' : ''}</label>`).join('')}</div>
+      <p class="small muted">El enlace contiene solo los puntajes de las secciones elegidas, nunca tus respuestas a cada pregunta (salvo tus respuestas abiertas, si decides incluirlas). No se guarda en ningún servidor: la información viaja dentro del propio enlace.</p>
+      <div class="row" style="margin-top:6px"><button class="btn btn-primary" id="mkLink">Crear enlace</button></div>
+      <div id="linkOut" hidden>
+        <div class="linkbox"><input class="input" id="linkInp" readonly aria-label="Enlace para compartir"><button class="btn btn-ghost" id="cpLink">Copiar</button></div>
+        <div class="row"><a class="btn btn-ghost" id="waLink" target="_blank" rel="noopener">Enviar por WhatsApp</a><button class="btn btn-ghost" id="cpText">Copiar resumen en texto</button><button class="btn btn-ghost" id="pdfSel">PDF de lo seleccionado</button></div>
+      </div>
+    </div></dialog>`;
+  }
+
+  function openShare(P) {
+    const dlg = document.getElementById('shareDlg');
+    const sel = () => [...dlg.querySelectorAll('#shareOpts input:checked')].map(i => i.value);
+    const out = dlg.querySelector('#linkOut');
+    dlg.querySelector('#closeDlg').onclick = () => dlg.close();
+    dlg.querySelectorAll('#shareOpts input').forEach(i => i.onchange = () => { out.hidden = true; });
+    dlg.querySelector('#mkLink').onclick = () => {
+      const chosen = sel(); if (!chosen.length) { toast('Elige al menos una sección'); return; }
+      const url = baseUrl() + '#r=' + b64e(JSON.stringify(filterProfile(P, chosen)));
+      dlg.querySelector('#linkInp').value = url;
+      const msg = `${P.n ? P.n + ' quiere' : 'Quiero'} compartir contigo los resultados de su cuestionario de autoconocimiento en pareja “Lazos”. Ábrelo aquí: ${url}`;
+      dlg.querySelector('#waLink').href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+      out.hidden = false; out.scrollIntoView({ block: 'nearest' });
+    };
+    dlg.querySelector('#cpLink').onclick = () => copy(dlg.querySelector('#linkInp').value);
+    dlg.querySelector('#cpText').onclick = () => copy(textSummary(filterProfile(P, sel())) + '\n\n' + dlg.querySelector('#linkInp').value);
+    dlg.querySelector('#pdfSel').onclick = () => { const c = sel(); dlg.close(); doPrint(c); };
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+
+  /* Deja en el perfil solo lo necesario para las secciones elegidas. */
+  function filterProfile(P, chosen) {
+    const F = { v: PAYLOAD_V, n: P.n, d: P.d, sec: chosen.slice(), s: {} };
+    const addS = k => { if (P.s[k] != null) F.s[k] = P.s[k]; };
+    if (chosen.includes('resumen')) { F.r = P.r; F.a = { A: P.a.A, V: P.a.V, st: P.a.st }; }
+    if (chosen.includes('fortalezas')) { F.f = P.f; P.f.forEach(addS); }
+    if (chosen.includes('trabajar')) { F.t = P.t; P.t.forEach(addS); }
+    ['miedos', 'inseguridades', 'heridas', 'anhelos', 'amor', 'conflicto'].forEach(id => { if (chosen.includes(id)) SECTION_DIMS[id].forEach(addS); });
+    if (chosen.includes('pareja')) { F.p = P.p; F.top = P.top; F.a = F.a || { st: P.a.st }; }
+    if (chosen.includes('abiertas')) F.o = P.o;
+    return F;
+  }
+
+  /* Valida un perfil recibido por enlace (dato no confiable). */
+  function sanitize(raw) {
+    if (!raw || typeof raw !== 'object') throw new Error('bad');
+    const P = { v: raw.v, n: typeof raw.n === 'string' ? raw.n.slice(0, 40) : '', d: typeof raw.d === 'string' ? raw.d.slice(0, 10) : '', s: {}, sec: [] };
+    P.sec = Array.isArray(raw.sec) ? raw.sec.filter(x => SECTIONS.some(s => s.id === x)) : [];
+    if (raw.s && typeof raw.s === 'object') Object.keys(raw.s).forEach(k => { if (DIMS[k]) P.s[k] = clamp(raw.s[k]); });
+    if (raw.r && typeof raw.r === 'object') { P.r = {}; RADAR_AXES.forEach(a => { if (raw.r[a.id] != null) P.r[a.id] = clamp(raw.r[a.id]); }); }
+    if (raw.a && typeof raw.a === 'object') P.a = { A: raw.a.A == null ? undefined : clamp(raw.a.A), V: raw.a.V == null ? undefined : clamp(raw.a.V), st: ATTACHMENT[raw.a.st] ? raw.a.st : undefined };
+    const keys = arr => Array.isArray(arr) ? arr.filter(k => DIMS[k]).slice(0, 8) : undefined;
+    P.f = keys(raw.f); P.t = keys(raw.t); P.p = keys(raw.p);
+    if (raw.top && typeof raw.top === 'object') P.top = { lr: LOVE[raw.top.lr] ? raw.top.lr : undefined, lg: LOVE[raw.top.lg] ? raw.top.lg : undefined, an: keys(raw.top.an) || [] };
+    if (raw.o && typeof raw.o === 'object') { P.o = {}; OPEN_QUESTIONS.forEach(q => { if (typeof raw.o[q.id] === 'string') P.o[q.id] = raw.o[q.id].slice(0, 600); }); }
+    return P;
+  }
+  function decodeCode(text) {
+    text = String(text || '').trim();
+    const m = text.match(/#r=([A-Za-z0-9_-]+)/); const code = m ? m[1] : (/^[A-Za-z0-9_-]+$/.test(text) ? text : null);
+    if (!code) throw new Error('bad');
+    return sanitize(JSON.parse(b64d(code)));
+  }
+
+  function textSummary(P) {
+    const L = [];
+    L.push(`💞 Resultados de ${P.n || 'mi cuestionario'} — Lazos`);
+    if (P.a && P.a.st && P.sec.includes('resumen')) L.push(`\nEstilo de apego: ${ATTACHMENT[P.a.st].name}`);
+    if (P.f && P.sec.includes('fortalezas')) L.push('\n🌱 Puntos fuertes:\n' + P.f.map(k => '• ' + DIMS[k].name).join('\n'));
+    if (P.t && P.sec.includes('trabajar')) L.push('\n🛠️ Áreas a trabajar:\n' + P.t.map(k => '• ' + DIMS[k].name).join('\n'));
+    const lst = (id, title) => { if (!P.sec.includes(id)) return; const ks = SECTION_DIMS[id].filter(k => P.s[k] != null && isConcern(k, P.s[k])); if (ks.length) L.push(`\n${title}:\n` + ks.map(k => '• ' + DIMS[k].name).join('\n')); };
+    lst('miedos', '🌧️ Miedos más presentes'); lst('inseguridades', '🪞 Inseguridades'); lst('heridas', '🧵 Patrones a sanar');
+    if (P.sec.includes('anhelos')) { const an = SECTION_DIMS.anhelos.filter(k => P.s[k] != null).sort((a, b) => P.s[b] - P.s[a]).slice(0, 3); if (an.length) L.push('\n✨ Lo que más anhelo: ' + an.map(k => DIMS[k].name.toLowerCase()).join(', ')); }
+    if (P.sec.includes('amor')) { const r = Object.keys(LOVE).filter(k => P.s['lr_' + k] != null).sort((a, b) => P.s['lr_' + b] - P.s['lr_' + a])[0]; if (r) L.push('💞 Me siento más querido/a con: ' + LOVE[r].name.toLowerCase()); }
+    if (P.sec.includes('pareja') && P.p) L.push('\n🤝 Lo que me ayuda:\n' + P.p.map(k => '• ' + DIMS[k].help).join('\n'));
+    return L.join('\n');
+  }
+
+  /* =====================================================================
+     VISTA DE RESULTADOS COMPARTIDOS
+     ===================================================================== */
+  function renderShared(code) {
+    let P;
+    try { P = decodeCode('#r=' + code); } catch (e) {
+      app.innerHTML = `<div class="card fade"><h2>No pudimos abrir este enlace</h2><p>Puede que esté incompleto o dañado. Pide que te lo vuelvan a enviar completo.</p><button class="btn btn-primary" id="home">Ir al inicio</button></div>`;
+      on('#home', () => { history.replaceState(null, '', baseUrl()); route(); }); return;
+    }
+    const secs = renderSections(P, false);
+    const mine = S.done && S.profile;
+    app.innerHTML = `
+      <div class="shared-banner fade">
+        <div class="eyebrow">Resultados compartidos contigo</div>
+        <h1 style="margin-bottom:6px">${P.n ? 'El mapa de ' + esc(P.n) : 'Un mapa compartido contigo'}</h1>
+        <p style="margin:0">${P.n ? esc(P.n) + ' eligió' : 'Esta persona eligió'} compartir esto contigo para que se conozcan mejor. Léelo con curiosidad y cariño, no como un juicio.</p>
+        <div class="row" style="margin-top:14px">
+          ${mine ? `<button class="btn btn-primary" id="cmpMine">Comparar con mis resultados</button>` : `<button class="btn btn-primary" id="doMine">Hacer mi propio cuestionario</button>`}
+          <button class="btn btn-ghost" id="print">Guardar PDF</button>
+        </div>
+      </div>
+      <nav class="chips" aria-label="Secciones">${secs.map(x => `<a href="#sec-${x.id}" data-jump="${x.id}">${esc(x.name)}</a>`).join('')}</nav>
+      ${secs.length ? secs.map(x => x.html).join('') : '<div class="card"><p>Este enlace no incluye secciones para mostrar.</p></div>'}
+      <div class="card soft fade no-print">
+        <h3>¿Quieres entenderse mejor en pareja?</h3>
+        <p>Haz tu propio cuestionario. Al terminar, podrás ver ambos perfiles lado a lado: dónde se complementan, dónde pueden chocar y preguntas para conversar.</p>
+        ${mine ? `<button class="btn btn-primary" id="cmpMine2">Comparar con mis resultados</button>` : `<button class="btn btn-primary" id="doMine2">Hacer mi cuestionario</button>`}
+      </div>
+      <div class="card soft small muted">Herramienta de autoexploración, no un diagnóstico. No sustituye la atención psicológica profesional.</div>`;
+    bindJump();
+    const doMine = () => { store.set(PENDING_KEY, P); history.replaceState(null, '', baseUrl()); S.started ? route() : renderSetup(); };
+    const cmpMine = () => { history.replaceState(null, '', baseUrl()); renderCompare(S.profile, P); };
+    on('#doMine', doMine); on('#doMine2', doMine); on('#cmpMine', cmpMine); on('#cmpMine2', cmpMine);
+    on('#print', () => doPrint());
+  }
+
+  /* =====================================================================
+     COMPARAR
+     ===================================================================== */
+  function renderCompareInput() {
+    const mine = S.done && S.profile;
+    app.innerHTML = `<div class="card fade">
+      <div class="eyebrow">Comparar</div>
+      <h2>Comparar dos perfiles</h2>
+      <p class="muted">Pega los enlaces de resultados de cada persona. ${mine ? 'Tus resultados ya están cargados como primera persona.' : ''}</p>
+      <div class="field" style="margin-bottom:14px"><label class="lbl" for="la">Persona A</label>
+        ${mine ? `<div class="choice" style="cursor:default">✓ Mis resultados${S.profile.n ? ' (' + esc(S.profile.n) + ')' : ''}</div>` : `<input class="input" id="la" placeholder="Pega aquí el enlace">`}</div>
+      <div class="field" style="margin-bottom:14px"><label class="lbl" for="lb">Persona B</label><input class="input" id="lb" placeholder="Pega aquí el enlace de tu pareja"></div>
+      <p id="err" class="small" style="color:var(--accent)" role="alert"></p>
+      <div class="row" style="justify-content:space-between"><button class="btn-link" id="back">Volver</button><button class="btn btn-primary" id="go">Comparar</button></div>
+    </div>`;
+    on('#back', () => { history.replaceState(null, '', baseUrl()); route(); });
+    on('#go', () => {
+      try {
+        const A = mine ? S.profile : decodeCode(app.querySelector('#la').value);
+        const B = decodeCode(app.querySelector('#lb').value);
+        history.replaceState(null, '', baseUrl());
+        renderCompare(A, B);
+      } catch (e) { app.querySelector('#err').textContent = 'Revisa los enlaces: alguno está incompleto o no es válido.'; }
+    });
+  }
+
+  function renderCompare(A, B) {
+    window.scrollTo(0, 0);
+    const nA = A.n || 'Persona A', nB = B.n || 'Persona B';
+    const pa = `<span class="pill-a">${esc(nA)}</span>`, pb = `<span class="pill-b">${esc(nB)}</span>`;
+    const cA = 'var(--accent)', cB = 'var(--sage)';
+    let html = `<div class="fade"><div class="eyebrow">Comparación</div><h1>${esc(nA)} y ${esc(nB)}</h1>
+      <p class="muted">Dos personas distintas no son un problema a resolver: son dos mapas que pueden aprender a leerse. Usen esto para conversar, no para competir.</p>
+      <div class="toolbar"><button class="btn btn-ghost" id="print">Guardar PDF</button><button class="btn btn-ghost" id="back">Volver</button></div></div>`;
+
+    // Radar y apego
+    if (A.r && B.r && Object.keys(A.r).length && Object.keys(B.r).length) {
+      html += secWrap('resumen', 'Sus mapas, juntos', `${radarSVG([{ r: A.r, color: cA, label: nA }, { r: B.r, color: cB, label: nB }])}
+        <div class="legend"><span style="--c:${cA}">${esc(nA)}</span><span style="--c:${cB}">${esc(nB)}</span></div>
+        ${complementos(A, B, pa, pb)}`);
+    }
+    if (A.a && B.a && A.a.st && B.a.st) {
+      const pts = []; if (A.a.A != null) pts.push({ A: A.a.A, V: A.a.V, color: cA, label: nA }); if (B.a.A != null) pts.push({ A: B.a.A, V: B.a.V, color: cB, label: nB });
+      html += `<section class="card fade"><div class="sec-title"><span class="ic">🔗</span><h2>Sus estilos de apego</h2></div>
+        <div class="att">${pts.length ? attachSVG(pts) : ''}<div>
+        <p>${pa} ${esc(ATTACHMENT[A.a.st].name)} · ${pb} ${esc(ATTACHMENT[B.a.st].name)}</p>
+        <p>${esc(attachPair(A.a.st, B.a.st))}</p></div></div></section>`;
+    }
+
+    // Dinámicas
+    const dyn = dynamics(A, B, pa, pb);
+    if (dyn.length) html += `<section class="card fade"><div class="sec-title"><span class="ic">⚖️</span><h2>Dónde pueden chocar</h2></div><p class="muted">No son sentencias, son puntos de atención para hablar a tiempo.</p>${dyn.join('')}</section>`;
+
+    // Amor
+    const lov = loveCompare(A, B, pa, pb);
+    if (lov) html += `<section class="card fade"><div class="sec-title"><span class="ic">💞</span><h2>Cómo darse amor</h2></div>${lov}</section>`;
+
+    // Anhelos
+    const anh = anhelosCompare(A, B, pa, pb, cA, cB);
+    if (anh) html += `<section class="card fade"><div class="sec-title"><span class="ic">✨</span><h2>Lo que anhelan</h2></div>${anh}</section>`;
+
+    // Necesidades mutuas
+    const nd = (P, pill) => (P.p || []).filter(k => DIMS[k]).map(k => `<li><span>${pill}</span><div>${esc(DIMS[k].help)}</div></li>`).join('');
+    const needs = nd(A, pa) + nd(B, pb);
+    if (needs) html += `<section class="card fade"><div class="sec-title"><span class="ic">🤲</span><h2>Cómo acompañarse</h2></div><p class="muted">Lo que cada quien pidió para sentirse en cuidado.</p><ul class="list-plain">${needs}</ul></section>`;
+
+    html += `<section class="card fade"><div class="sec-title"><span class="ic">🗣️</span><h2>Guía para conversar</h2></div>
+      <h3>Reglas para una conversación segura</h3><ul class="ex">${CONVO_RULES.map(r => `<li>${esc(r)}</li>`).join('')}</ul>
+      <h3 style="margin-top:18px">Preguntas para hablar juntos</h3><ol class="q">${CONVO_QUESTIONS.map(q => `<li>${esc(q)}</li>`).join('')}</ol>
+      <p class="small muted">Sugerencia: elijan dos o tres preguntas por conversación. No hace falta resolverlo todo en una noche.</p></section>
+      <div class="card soft small muted">La comparación usa solo las secciones que cada persona decidió compartir. Si algo no aparece, es porque una de las dos personas no lo incluyó.</div>`;
+    app.innerHTML = html;
+    on('#print', () => doPrint());
+    on('#back', () => { history.replaceState(null, '', baseUrl()); route(); });
+  }
+
+  function complementos(A, B, pa, pb) {
+    const out = [];
+    RADAR_AXES.forEach(ax => {
+      const a = A.r[ax.id], b = B.r[ax.id]; if (a == null || b == null) return;
+      if (a >= 65 && b >= 65) out.push(`<div class="cmp-item"><strong>🌟 Fortaleza compartida: ${esc(ax.name)}</strong>Ambos tienen recursos aquí. Es un pilar de la relación.</div>`);
+      else if (a >= 65 && b < 50) out.push(`<div class="cmp-item"><strong>🔄 Se complementan en: ${esc(ax.name)}</strong>${pa} puede ofrecer apoyo y ejemplo en esta área; ${pb} tiene aquí espacio para crecer, con paciencia y sin presión.</div>`);
+      else if (b >= 65 && a < 50) out.push(`<div class="cmp-item"><strong>🔄 Se complementan en: ${esc(ax.name)}</strong>${pb} puede ofrecer apoyo y ejemplo en esta área; ${pa} tiene aquí espacio para crecer, con paciencia y sin presión.</div>`);
+      else if (a < 45 && b < 45) out.push(`<div class="cmp-item"><strong>🌱 Reto compartido: ${esc(ax.name)}</strong>Es un área que a ambos les cuesta. Pueden trabajarla como equipo, y quizá con apoyo externo.</div>`);
+    });
+    return out.length ? `<h3 style="margin-top:18px">Lo que muestran sus mapas</h3>${out.join('')}` : '';
+  }
+
+  function attachPair(a, b) {
+    const k = [a, b].sort().join('+');
+    if (a === 'temeroso' || b === 'temeroso') return 'Una o ambas personas pueden oscilar entre buscar cercanía y alejarse. La paciencia, los acuerdos claros y la coherencia ayudan mucho; el apoyo profesional también puede marcar una gran diferencia.';
+    const T = {
+      'seguro+seguro': 'Ambos parten de una base segura: pueden apoyarse en ella para hablar de cualquier tema, incluso los difíciles.',
+      'ansioso+seguro': 'La seguridad de una persona puede ofrecer calma a la otra. Cuiden que la persona segura no se convierta en la única que “sostiene” la relación, y que la ansiosa pueda expresar sus necesidades de forma directa.',
+      'evitativo+seguro': 'La persona segura puede ofrecer cercanía sin presión, lo que ayuda a la evitativa a abrirse. Respeten los tiempos de espacio y acuerden momentos de conexión.',
+      'ansioso+evitativo': 'Es una combinación muy común y desafiante: cuando una persona busca cercanía, la otra necesita espacio, y eso puede activar un ciclo de perseguir y alejarse. Reconocer ese ciclo como el “enemigo común” (y no a la persona) es el primer paso para salir de él.',
+      'ansioso+ansioso': 'Ambos valoran mucho la cercanía y pueden darse mucha seguridad mutua. En momentos de estrés, sin embargo, las inseguridades pueden alimentarse entre sí: acuerden formas de calmarse juntos.',
+      'evitativo+evitativo': 'Ambos respetan el espacio del otro, pero puede que los temas emocionales queden sin hablar. Programen momentos regulares para conversar de lo que sienten.'
+    };
+    return T[k] || '';
+  }
+
+  function dynamics(A, B, pa, pb) {
+    const out = [], hi = (P, k, t = 55) => P.s && P.s[k] != null && P.s[k] >= t;
+    const item = (t, d) => `<div class="cmp-item"><strong>${t}</strong>${d}</div>`;
+    [[A, B, pa, pb], [B, A, pb, pa]].forEach(([X, Y, px, py]) => {
+      if (hi(X, 'critica') && hi(Y, 'evasion')) out.push(item('Ciclo de queja y retirada', `Cuando ${px} expresa molestia con crítica, ${py} tiende a cerrarse; eso aumenta la frustración de ${px}. Antídoto: inicio suave de un lado, pausas acordadas del otro.`));
+      if (hi(X, 'abandono') && hi(Y, 'absorcion')) out.push(item('Cercanía vs. libertad', `${px} teme perder la relación y ${py} teme perder su libertad. Lo que para uno es cuidado, para el otro puede sentirse como presión. Hablen de cuánta cercanía y cuánto espacio necesita cada quien.`));
+      if (hi(X, 'comparacion') && hi(Y, 'autonomia', 70)) out.push(item('Celos y espacios propios', `${py} valora mucho sus espacios y ${px} puede sentir inseguridad con ellos. Acuerdos claros y transparencia ayudan a ambos.`));
+      if (hi(X, 'exigencia') && hi(Y, 'verguenza')) out.push(item('Exigencia y sensibilidad a la crítica', `Los altos estándares de ${px} pueden tocar la herida de vergüenza de ${py}. Hablar de situaciones concretas, no de cómo es la persona, hace la diferencia.`));
+    });
+    if (hi(A, 'evasion') && hi(B, 'evasion')) out.push(item('Temas que se quedan sin hablar', 'Ambos tienden a evitar el conflicto. Puede parecer paz, pero los temas pendientes se acumulan. Agenden una conversación semanal de “cómo estamos”.'));
+    if (hi(A, 'critica') && hi(B, 'critica')) out.push(item('Discusiones que escalan', 'Ambos tienden a la crítica cuando algo molesta. Acuerden una palabra clave para pausar y retomar con calma.'));
+    if (hi(A, 'defensa') && hi(B, 'defensa')) out.push(item('Nadie se siente escuchado', 'Ambos tienden a defenderse ante una queja. Practiquen repetir lo que la otra persona dijo antes de responder.'));
+    if (hi(A, 'desprecio', 50) || hi(B, 'desprecio', 50)) out.push(item('Atención al desprecio', 'El sarcasmo y la burla son el patrón más dañino según Gottman. Si aparece, conviene atenderlo pronto, y quizá con apoyo de terapia de pareja.'));
+    return [...new Set(out)];
+  }
+
+  function topLove(P, pre) {
+    if (P.s && Object.keys(LOVE).some(k => P.s[pre + k] != null)) return Object.keys(LOVE).filter(k => P.s[pre + k] != null).sort((a, b) => P.s[pre + b] - P.s[pre + a])[0];
+    return P.top ? P.top[pre === 'lr_' ? 'lr' : 'lg'] : undefined;
+  }
+  function loveCompare(A, B, pa, pb) {
+    const ar = topLove(A, 'lr_'), ag = topLove(A, 'lg_'), br = topLove(B, 'lr_'), bg = topLove(B, 'lg_');
+    const out = [];
+    if (ar) out.push(`<div class="cmp-item"><div>${pa} se siente más amado o amada con <strong>${esc(LOVE[ar].receive)}</strong>.${bg ? (bg === ar ? ` ¡Y es justo como ${pb} suele dar amor!` : ` ${pb} suele dar amor con ${esc(LOVE[bg].name.toLowerCase())}: vale la pena que también practique ${esc(LOVE[ar].name.toLowerCase())}.`) : ''}</div><div class="small muted" style="margin-top:6px">Idea: ${esc(LOVE[ar].help)}</div></div>`);
+    if (br) out.push(`<div class="cmp-item"><div>${pb} se siente más amado o amada con <strong>${esc(LOVE[br].receive)}</strong>.${ag ? (ag === br ? ` ¡Y es justo como ${pa} suele dar amor!` : ` ${pa} suele dar amor con ${esc(LOVE[ag].name.toLowerCase())}: vale la pena que también practique ${esc(LOVE[br].name.toLowerCase())}.`) : ''}</div><div class="small muted" style="margin-top:6px">Idea: ${esc(LOVE[br].help)}</div></div>`);
+    return ar && br ? out.join('') : '';
+  }
+
+  function anhelosCompare(A, B, pa, pb, cA, cB) {
+    const keys = SECTION_DIMS.anhelos.filter(k => A.s && B.s && A.s[k] != null && B.s[k] != null);
+    if (!keys.length) return '';
+    const both = keys.filter(k => A.s[k] >= 75 && B.s[k] >= 75).map(k => DIMS[k].name.toLowerCase());
+    const gaps = keys.filter(k => Math.abs(A.s[k] - B.s[k]) >= 40);
+    return `${keys.map(k => `<div class="dim"><div class="dim-h"><strong>${esc(DIMS[k].name)}</strong><span class="small muted">${A.s[k]} · ${B.s[k]}</span></div>
+        <div class="bar" aria-hidden="true"><div style="width:${Math.max(3, A.s[k])}%;background:${cA}"></div></div><div class="bar b2" aria-hidden="true"><div style="width:${Math.max(3, B.s[k])}%;background:${cB}"></div></div></div>`).join('')}
+      <div class="legend"><span style="--c:${cA}">${pa}</span><span style="--c:${cB}">${pb}</span></div>
+      ${both.length ? `<div class="cmp-item" style="margin-top:12px"><strong>🌟 Lo que ambos anhelan</strong>${esc(both.join(', '))}. Es terreno fértil para construir juntos.</div>` : ''}
+      ${gaps.map(k => `<div class="cmp-item"><strong>💬 Para conversar: ${esc(DIMS[k].name)}</strong>${A.s[k] > B.s[k] ? pa : pb} lo valora bastante más que ${A.s[k] > B.s[k] ? pb : pa}. No es incompatible, pero conviene hablar de qué significa para cada quien y cómo pueden honrarlo.</div>`).join('')}`;
+  }
+
+  window.addEventListener('beforeprint', () => app.querySelectorAll('details').forEach(d => d.open = true));
+
+  route();
+})();
+
+</script>
+</body>
+</html>
